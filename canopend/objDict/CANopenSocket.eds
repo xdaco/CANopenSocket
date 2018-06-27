@@ -245,7 +245,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x00040191
 
 [1001]
 ParameterName=Error register

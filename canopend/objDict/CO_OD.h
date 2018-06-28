@@ -60,7 +60,7 @@
    FILE INFO:
       FileName:     CANopenSocket
       FileVersion:  -
-      CreationTime: 11:26:20
+      CreationTime: 21:31:03
       CreationDate: 2018-06-28
       CreatedBy:    JP
 *******************************************************************************/
@@ -91,7 +91,7 @@
 /*******************************************************************************
    OBJECT DICTIONARY
 *******************************************************************************/
-   #define CO_OD_NoOfElements             169
+   #define CO_OD_NoOfElements             170
 
 
 /*******************************************************************************
@@ -212,11 +212,12 @@ struct sCO_OD_RAM{
 /*1010      */ UNSIGNED32     storeParameters[1];
 /*1011      */ UNSIGNED32     restoreDefaultParameters[1];
 /*1280[1]   */ OD_SDOClientParameter_t SDOClientParameter[1];
+/*2000      */ INTEGER32      cmd_CANGO[2];
+/*2008      */ UNSIGNED8      cmd_DOUT;
 /*2100      */ OCTET_STRING   errorStatusBits[10];
-/*2103      */ UNSIGNED16     SYNCCounter;
+/*2103      */ INTEGER16      qry_ABSPEED[2];
 /*2104      */ UNSIGNED16     SYNCTime;
 /*2107      */ UNSIGNED16     performance[5];
-/*2108      */ INTEGER16      temperature[1];
 /*2109      */ INTEGER16      voltage[1];
 /*2110      */ INTEGER32      variableInt32[32];
 /*2120      */ OD_testVar_t   testVar;
@@ -250,7 +251,7 @@ struct sCO_OD_ROM{
 /*1005      */ UNSIGNED32     COB_ID_SYNCMessage;
 /*1006      */ UNSIGNED32     communicationCyclePeriod;
 /*1007      */ UNSIGNED32     synchronousWindowLength;
-/*1008      */ VISIBLE_STRING manufacturerDeviceName[24];
+/*1008      */ VISIBLE_STRING manufacturerDeviceName[30];
 /*1009      */ VISIBLE_STRING manufacturerHardwareVersion[4];
 /*100A      */ VISIBLE_STRING manufacturerSoftwareVersion[4];
 /*1014      */ UNSIGNED32     COB_ID_EMCY;
@@ -308,9 +309,9 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 /*1007, Data Type: UNSIGNED32 */
       #define OD_synchronousWindowLength                 CO_OD_ROM.synchronousWindowLength
 
-/*1008, Data Type: VISIBLE_STRING, Array[24] */
+/*1008, Data Type: VISIBLE_STRING, Array[30] */
       #define OD_manufacturerDeviceName                  CO_OD_ROM.manufacturerDeviceName
-      #define ODL_manufacturerDeviceName_stringLength    24
+      #define ODL_manufacturerDeviceName_stringLength    30
 
 /*1009, Data Type: VISIBLE_STRING, Array[4] */
       #define OD_manufacturerHardwareVersion             CO_OD_ROM.manufacturerHardwareVersion
@@ -380,6 +381,15 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 /*1F80, Data Type: UNSIGNED32 */
       #define OD_NMTStartup                              CO_OD_ROM.NMTStartup
 
+/*2000, Data Type: INTEGER32, Array[2] */
+      #define OD_cmd_CANGO                               CO_OD_RAM.cmd_CANGO
+      #define ODL_cmd_CANGO_arrayLength                  2
+      #define ODA_cmd_CANGO_cmd_CANGO1                   0
+      #define ODA_cmd_CANGO_cmd_CANGO2                   1
+
+/*2008, Data Type: UNSIGNED8 */
+      #define OD_cmd_DOUT                                CO_OD_RAM.cmd_DOUT
+
 /*2100, Data Type: OCTET_STRING, Array[10] */
       #define OD_errorStatusBits                         CO_OD_RAM.errorStatusBits
       #define ODL_errorStatusBits_stringLength           10
@@ -390,8 +400,11 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 /*2102, Data Type: UNSIGNED16 */
       #define OD_CANBitRate                              CO_OD_ROM.CANBitRate
 
-/*2103, Data Type: UNSIGNED16 */
-      #define OD_SYNCCounter                             CO_OD_RAM.SYNCCounter
+/*2103, Data Type: INTEGER16, Array[2] */
+      #define OD_qry_ABSPEED                             CO_OD_RAM.qry_ABSPEED
+      #define ODL_qry_ABSPEED_arrayLength                2
+      #define ODA_qry_ABSPEED_channel1                   0
+      #define ODA_qry_ABSPEED_channel2                   1
 
 /*2104, Data Type: UNSIGNED16 */
       #define OD_SYNCTime                                CO_OD_RAM.SYNCTime
@@ -407,11 +420,6 @@ extern struct sCO_OD_ROM CO_OD_ROM;
       #define ODA_performance_timerCycleMaxTime          2
       #define ODA_performance_mainCycleTime              3
       #define ODA_performance_mainCycleMaxTime           4
-
-/*2108, Data Type: INTEGER16, Array[1] */
-      #define OD_temperature                             CO_OD_RAM.temperature
-      #define ODL_temperature_arrayLength                1
-      #define ODA_temperature_mainPCB                    0
 
 /*2109, Data Type: INTEGER16, Array[1] */
       #define OD_voltage                                 CO_OD_RAM.voltage
@@ -463,4 +471,3 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 
 
 #endif
-

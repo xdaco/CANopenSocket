@@ -5,20 +5,20 @@
 
 
 [FileInfo]
-FileName=BlueOcean_Fake_CiA401 IO
-FileVersion=0.001
+FileName=CANopenSocket
+FileVersion=-
 FileRevision=0
 EDSVersion=4.0
 Description=Open Source CANopen implementation
-CreationTime=12:39:04
+CreationTime=21:12:45
 CreationDate=2018-06-28
-CreatedBy=Musarraf
+CreatedBy=JP
 
 
 [DeviceInfo]
-VendorName=BlueOcean Robotics
-VendorNumber=160
-ProductName=BlueOcean Fake CiA401 IO
+VendorName=CANopenNode
+VendorNumber=0
+ProductName=CANopenNode
 ProductNumber=0
 RevisionNumber=0
 OrderCode=0
@@ -158,86 +158,87 @@ SupportedObjects=87
 
 
 [ManufacturerObjects]
-SupportedObjects=79
-1=0x2100
-2=0x2101
-3=0x2102
-4=0x2103
-5=0x2104
-6=0x2106
-7=0x2107
-8=0x2108
-9=0x2109
-10=0x2110
-11=0x2111
-12=0x2112
-13=0x2120
-14=0x2130
-15=0x2301
-16=0x2302
-17=0x2303
-18=0x2304
-19=0x2305
-20=0x2306
-21=0x2307
-22=0x2308
-23=0x2309
-24=0x230A
-25=0x230B
-26=0x230C
-27=0x230D
-28=0x230E
-29=0x230F
-30=0x2310
-31=0x2311
-32=0x2312
-33=0x2313
-34=0x2314
-35=0x2315
-36=0x2316
-37=0x2317
-38=0x2318
-39=0x2319
-40=0x231A
-41=0x231B
-42=0x231C
-43=0x231D
-44=0x231E
-45=0x231F
-46=0x2320
-47=0x2400
-48=0x2401
-49=0x2402
-50=0x2403
-51=0x2404
-52=0x2405
-53=0x2406
-54=0x2407
-55=0x2408
-56=0x2409
-57=0x240A
-58=0x240B
-59=0x240C
-60=0x240D
-61=0x240E
-62=0x240F
-63=0x2410
-64=0x2411
-65=0x2412
-66=0x2413
-67=0x2414
-68=0x2415
-69=0x2416
-70=0x2417
-71=0x2418
-72=0x2419
-73=0x241A
-74=0x241B
-75=0x241C
-76=0x241D
-77=0x241E
-78=0x241F
-79=0x2420
+SupportedObjects=80
+1=0x2000
+2=0x2100
+3=0x2101
+4=0x2102
+5=0x2103
+6=0x2104
+7=0x2106
+8=0x2107
+9=0x2108
+10=0x2109
+11=0x2110
+12=0x2111
+13=0x2112
+14=0x2120
+15=0x2130
+16=0x2301
+17=0x2302
+18=0x2303
+19=0x2304
+20=0x2305
+21=0x2306
+22=0x2307
+23=0x2308
+24=0x2309
+25=0x230A
+26=0x230B
+27=0x230C
+28=0x230D
+29=0x230E
+30=0x230F
+31=0x2310
+32=0x2311
+33=0x2312
+34=0x2313
+35=0x2314
+36=0x2315
+37=0x2316
+38=0x2317
+39=0x2318
+40=0x2319
+41=0x231A
+42=0x231B
+43=0x231C
+44=0x231D
+45=0x231E
+46=0x231F
+47=0x2320
+48=0x2400
+49=0x2401
+50=0x2402
+51=0x2403
+52=0x2404
+53=0x2405
+54=0x2406
+55=0x2407
+56=0x2408
+57=0x2409
+58=0x240A
+59=0x240B
+60=0x240C
+61=0x240D
+62=0x240E
+63=0x240F
+64=0x2410
+65=0x2411
+66=0x2412
+67=0x2413
+68=0x2414
+69=0x2415
+70=0x2416
+71=0x2417
+72=0x2418
+73=0x2419
+74=0x241A
+75=0x241B
+76=0x241C
+77=0x241D
+78=0x241E
+79=0x241F
+80=0x2420
 
 [1000]
 ParameterName=Device type
@@ -245,7 +246,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x00030191
+DefaultValue=0x00000000
 
 [1001]
 ParameterName=Error register
@@ -370,7 +371,7 @@ ObjectType=7
 DataType=0x0009
 AccessType=const
 PDOMapping=0
-DefaultValue=BlueOcean Fake CiA401 IO
+DefaultValue=CANopenNode
 
 [1009]
 ParameterName=Manufacturer hardware version
@@ -378,7 +379,7 @@ ObjectType=7
 DataType=0x0009
 AccessType=const
 PDOMapping=0
-DefaultValue=1.00
+DefaultValue=3.00
 
 [100A]
 ParameterName=Manufacturer software version
@@ -386,7 +387,7 @@ ObjectType=7
 DataType=0x0009
 AccessType=const
 PDOMapping=0
-DefaultValue=1.00
+DefaultValue=3.00
 
 [1010]
 ParameterName=Store parameters
@@ -518,7 +519,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=160
+DefaultValue=0x00000000
 
 [1018sub2]
 ParameterName=Product code
@@ -526,7 +527,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x00139F7E
+DefaultValue=0x00000000
 
 [1018sub3]
 ParameterName=Revision number
@@ -534,7 +535,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x1
+DefaultValue=0x00000000
 
 [1018sub4]
 ParameterName=Serial number
@@ -542,7 +543,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x71851998
+DefaultValue=0x00000000
 
 [1019]
 ParameterName=Synchronous counter overflow value
@@ -4591,6 +4592,35 @@ AccessType=rw
 PDOMapping=0
 DefaultValue=0x00000000
 
+[2000]
+ParameterName=Cmd_CANGO
+ObjectType=8
+SubNumber=3
+
+[2000sub0]
+ParameterName=Number of entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+DefaultValue=2
+
+[2000sub1]
+ParameterName=Cmd_CANGO 1
+ObjectType=7
+DataType=0x0004
+AccessType=rww
+PDOMapping=1
+DefaultValue=0
+
+[2000sub2]
+ParameterName=Cmd_CANGO 2
+ObjectType=7
+DataType=0x0004
+AccessType=rww
+PDOMapping=1
+DefaultValue=0
+
 [2100]
 ParameterName=Error status bits
 ObjectType=7
@@ -4616,12 +4646,33 @@ PDOMapping=0
 DefaultValue=250
 
 [2103]
-ParameterName=SYNC counter
+ParameterName=Qry_ABSPEED
+ObjectType=8
+SubNumber=3
+
+[2103sub0]
+ParameterName=Number of entries
 ObjectType=7
-DataType=0x0006
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+DefaultValue=2
+
+[2103sub1]
+ParameterName=Channel 1
+ObjectType=7
+DataType=0x0003
 AccessType=rw
 PDOMapping=0
-DefaultValue=0
+DefaultValue=4290
+
+[2103sub2]
+ParameterName=Channel 2
+ObjectType=7
+DataType=0x0003
+AccessType=rw
+PDOMapping=0
+DefaultValue=-4290
 
 [2104]
 ParameterName=SYNC time

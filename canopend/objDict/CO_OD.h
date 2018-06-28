@@ -34,8 +34,8 @@
 
 *******************************************************************************/
 
-#ifndef _CO_OD_H
-#define _CO_OD_H
+#ifndef CO_OD_H
+#define CO_OD_H
 
 
 /*******************************************************************************
@@ -58,17 +58,17 @@
 
 /*******************************************************************************
    FILE INFO:
-      FileName:     IO
-      FileVersion:  3.0
-      CreationTime: 13:23:28
-      CreationDate: 2013-03-09
-      CreatedBy:    -
+      FileName:     CANopenSocket
+      FileVersion:  -
+      CreationTime: 11:26:20
+      CreationDate: 2018-06-28
+      CreatedBy:    JP
 *******************************************************************************/
 
 
 /*******************************************************************************
    DEVICE INFO:
-      VendorName:     Paternoster
+      VendorName:     CANopenNode
       VendorNumber:   0
       ProductName:    CANopenNode
       ProductNumber:  0
@@ -81,16 +81,17 @@
    #define CO_NO_SYNC                     1   //Associated objects: 1005, 1006, 1007, 2103, 2104
    #define CO_NO_EMERGENCY                1   //Associated objects: 1014, 1015
    #define CO_NO_SDO_SERVER               1   //Associated objects: 1200
-   #define CO_NO_SDO_CLIENT               0   
-   #define CO_NO_RPDO                     4   //Associated objects: 1400, 1401, 1402, 1403, 1600, 1601, 1602, 1603
-   #define CO_NO_TPDO                     4   //Associated objects: 1800, 1801, 1802, 1803, 1A00, 1A01, 1A02, 1A03
-   #define CO_NO_NMT_MASTER               0   
+   #define CO_NO_SDO_CLIENT               1   //Associated objects: 1280
+   #define CO_NO_RPDO                     16  //Associated objects from index 1400 to 160F, count = 32
+   #define CO_NO_TPDO                     16  //Associated objects from index 1800 to 1A0F, count = 32
+   #define CO_NO_NMT_MASTER               1   
+   #define CO_NO_TRACE                    32  //Associated objects from index 2301 to 2420, count = 65
 
 
 /*******************************************************************************
    OBJECT DICTIONARY
 *******************************************************************************/
-   #define CO_OD_NoOfElements             54
+   #define CO_OD_NoOfElements             169
 
 
 /*******************************************************************************
@@ -110,13 +111,20 @@
                UNSIGNED32     COB_IDServerToClient;
                }              OD_SDOServerParameter_t;
 
-/*1400[4]   */ typedef struct{
+/*1280[1]   */ typedef struct{
+               UNSIGNED8      maxSubIndex;
+               UNSIGNED32     COB_IDClientToServer;
+               UNSIGNED32     COB_IDServerToClient;
+               UNSIGNED8      nodeIDOfTheSDOServer;
+               }              OD_SDOClientParameter_t;
+
+/*1400[16]  */ typedef struct{
                UNSIGNED8      maxSubIndex;
                UNSIGNED32     COB_IDUsedByRPDO;
                UNSIGNED8      transmissionType;
                }              OD_RPDOCommunicationParameter_t;
 
-/*1600[4]   */ typedef struct{
+/*1600[16]  */ typedef struct{
                UNSIGNED8      numberOfMappedObjects;
                UNSIGNED32     mappedObject1;
                UNSIGNED32     mappedObject2;
@@ -128,7 +136,7 @@
                UNSIGNED32     mappedObject8;
                }              OD_RPDOMappingParameter_t;
 
-/*1800[4]   */ typedef struct{
+/*1800[16]  */ typedef struct{
                UNSIGNED8      maxSubIndex;
                UNSIGNED32     COB_IDUsedByTPDO;
                UNSIGNED8      transmissionType;
@@ -138,7 +146,7 @@
                UNSIGNED8      SYNCStartValue;
                }              OD_TPDOCommunicationParameter_t;
 
-/*1A00[4]   */ typedef struct{
+/*1A00[16]  */ typedef struct{
                UNSIGNED8      numberOfMappedObjects;
                UNSIGNED32     mappedObject1;
                UNSIGNED32     mappedObject2;
@@ -159,6 +167,35 @@
                DOMAIN         domain;
                }              OD_testVar_t;
 
+/*2130      */ typedef struct{
+               UNSIGNED8      maxSubIndex;
+               VISIBLE_STRING string[30];
+               UNSIGNED64     epochTimeBaseMs;
+               UNSIGNED32     epochTimeOffsetMs;
+               }              OD_time_t;
+
+/*2301[32]  */ typedef struct{
+               UNSIGNED8      maxSubIndex;
+               UNSIGNED32     size;
+               UNSIGNED8      axisNo;
+               VISIBLE_STRING name[30];
+               VISIBLE_STRING color[20];
+               UNSIGNED32     map;
+               UNSIGNED8      format;
+               UNSIGNED8      trigger;
+               INTEGER32      threshold;
+               }              OD_traceConfig_t;
+
+/*2401[32]  */ typedef struct{
+               UNSIGNED8      maxSubIndex;
+               UNSIGNED32     size;
+               INTEGER32      value;
+               INTEGER32      min;
+               INTEGER32      max;
+               DOMAIN         plot;
+               UNSIGNED32     triggerTime;
+               }              OD_trace_t;
+
 
 /*******************************************************************************
    STRUCTURES FOR VARIABLES IN DIFFERENT MEMORY LOCATIONS
@@ -174,14 +211,18 @@ struct sCO_OD_RAM{
 /*1003      */ UNSIGNED32     preDefinedErrorField[8];
 /*1010      */ UNSIGNED32     storeParameters[1];
 /*1011      */ UNSIGNED32     restoreDefaultParameters[1];
+/*1280[1]   */ OD_SDOClientParameter_t SDOClientParameter[1];
 /*2100      */ OCTET_STRING   errorStatusBits[10];
 /*2103      */ UNSIGNED16     SYNCCounter;
 /*2104      */ UNSIGNED16     SYNCTime;
 /*2107      */ UNSIGNED16     performance[5];
 /*2108      */ INTEGER16      temperature[1];
 /*2109      */ INTEGER16      voltage[1];
-/*2110      */ INTEGER32      variableInt32[16];
+/*2110      */ INTEGER32      variableInt32[32];
 /*2120      */ OD_testVar_t   testVar;
+/*2130      */ OD_time_t      time;
+/*2400      */ UNSIGNED8      traceEnable;
+/*2401[32]  */ OD_trace_t     trace[32];
 /*6000      */ UNSIGNED8      readInput8Bit[8];
 /*6200      */ UNSIGNED8      writeOutput8Bit[8];
 /*6401      */ INTEGER16      readAnalogueInput16Bit[12];
@@ -209,7 +250,7 @@ struct sCO_OD_ROM{
 /*1005      */ UNSIGNED32     COB_ID_SYNCMessage;
 /*1006      */ UNSIGNED32     communicationCyclePeriod;
 /*1007      */ UNSIGNED32     synchronousWindowLength;
-/*1008      */ VISIBLE_STRING manufacturerDeviceName[11];
+/*1008      */ VISIBLE_STRING manufacturerDeviceName[24];
 /*1009      */ VISIBLE_STRING manufacturerHardwareVersion[4];
 /*100A      */ VISIBLE_STRING manufacturerSoftwareVersion[4];
 /*1014      */ UNSIGNED32     COB_ID_EMCY;
@@ -220,14 +261,15 @@ struct sCO_OD_ROM{
 /*1019      */ UNSIGNED8      synchronousCounterOverflowValue;
 /*1029      */ UNSIGNED8      errorBehavior[6];
 /*1200[1]   */ OD_SDOServerParameter_t SDOServerParameter[1];
-/*1400[4]   */ OD_RPDOCommunicationParameter_t RPDOCommunicationParameter[4];
-/*1600[4]   */ OD_RPDOMappingParameter_t RPDOMappingParameter[4];
-/*1800[4]   */ OD_TPDOCommunicationParameter_t TPDOCommunicationParameter[4];
-/*1A00[4]   */ OD_TPDOMappingParameter_t TPDOMappingParameter[4];
+/*1400[16]  */ OD_RPDOCommunicationParameter_t RPDOCommunicationParameter[16];
+/*1600[16]  */ OD_RPDOMappingParameter_t RPDOMappingParameter[16];
+/*1800[16]  */ OD_TPDOCommunicationParameter_t TPDOCommunicationParameter[16];
+/*1A00[16]  */ OD_TPDOMappingParameter_t TPDOMappingParameter[16];
 /*1F80      */ UNSIGNED32     NMTStartup;
 /*2101      */ UNSIGNED8      CANNodeID;
 /*2102      */ UNSIGNED16     CANBitRate;
 /*2111      */ INTEGER32      variableROMInt32[16];
+/*2301[32]  */ OD_traceConfig_t traceConfig[32];
 
                UNSIGNED32     LastWord;
 };
@@ -266,9 +308,9 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 /*1007, Data Type: UNSIGNED32 */
       #define OD_synchronousWindowLength                 CO_OD_ROM.synchronousWindowLength
 
-/*1008, Data Type: VISIBLE_STRING, Array[11] */
+/*1008, Data Type: VISIBLE_STRING, Array[24] */
       #define OD_manufacturerDeviceName                  CO_OD_ROM.manufacturerDeviceName
-      #define ODL_manufacturerDeviceName_stringLength    11
+      #define ODL_manufacturerDeviceName_stringLength    24
 
 /*1009, Data Type: VISIBLE_STRING, Array[4] */
       #define OD_manufacturerHardwareVersion             CO_OD_ROM.manufacturerHardwareVersion
@@ -320,16 +362,19 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 /*1200[1], Data Type: OD_SDOServerParameter_t, Array[1] */
       #define OD_SDOServerParameter                      CO_OD_ROM.SDOServerParameter
 
-/*1400[4], Data Type: OD_RPDOCommunicationParameter_t, Array[4] */
+/*1280[1], Data Type: OD_SDOClientParameter_t, Array[1] */
+      #define OD_SDOClientParameter                      CO_OD_RAM.SDOClientParameter
+
+/*1400[16], Data Type: OD_RPDOCommunicationParameter_t, Array[16] */
       #define OD_RPDOCommunicationParameter              CO_OD_ROM.RPDOCommunicationParameter
 
-/*1600[4], Data Type: OD_RPDOMappingParameter_t, Array[4] */
+/*1600[16], Data Type: OD_RPDOMappingParameter_t, Array[16] */
       #define OD_RPDOMappingParameter                    CO_OD_ROM.RPDOMappingParameter
 
-/*1800[4], Data Type: OD_TPDOCommunicationParameter_t, Array[4] */
+/*1800[16], Data Type: OD_TPDOCommunicationParameter_t, Array[16] */
       #define OD_TPDOCommunicationParameter              CO_OD_ROM.TPDOCommunicationParameter
 
-/*1A00[4], Data Type: OD_TPDOMappingParameter_t, Array[4] */
+/*1A00[16], Data Type: OD_TPDOMappingParameter_t, Array[16] */
       #define OD_TPDOMappingParameter                    CO_OD_ROM.TPDOMappingParameter
 
 /*1F80, Data Type: UNSIGNED32 */
@@ -373,9 +418,9 @@ extern struct sCO_OD_ROM CO_OD_ROM;
       #define ODL_voltage_arrayLength                    1
       #define ODA_voltage_mainPCBSupply                  0
 
-/*2110, Data Type: INTEGER32, Array[16] */
+/*2110, Data Type: INTEGER32, Array[32] */
       #define OD_variableInt32                           CO_OD_RAM.variableInt32
-      #define ODL_variableInt32_arrayLength              16
+      #define ODL_variableInt32_arrayLength              32
 
 /*2111, Data Type: INTEGER32, Array[16] */
       #define OD_variableROMInt32                        CO_OD_ROM.variableROMInt32
@@ -387,6 +432,18 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 
 /*2120, Data Type: OD_testVar_t */
       #define OD_testVar                                 CO_OD_RAM.testVar
+
+/*2130, Data Type: OD_time_t */
+      #define OD_time                                    CO_OD_RAM.time
+
+/*2301[32], Data Type: OD_traceConfig_t, Array[32] */
+      #define OD_traceConfig                             CO_OD_ROM.traceConfig
+
+/*2400, Data Type: UNSIGNED8 */
+      #define OD_traceEnable                             CO_OD_RAM.traceEnable
+
+/*2401[32], Data Type: OD_trace_t, Array[32] */
+      #define OD_trace                                   CO_OD_RAM.trace
 
 /*6000, Data Type: UNSIGNED8, Array[8] */
       #define OD_readInput8Bit                           CO_OD_RAM.readInput8Bit
@@ -406,3 +463,4 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 
 
 #endif
+

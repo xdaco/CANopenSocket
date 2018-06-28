@@ -1,0 +1,39 @@
+Relative path for editor:  ../../../src/canopennode-code_complete/Object_Dictionary_Editor/
+
+Introduction to Object Dictionary Editor
+
+CANopen Object dictionary is a collection of all the data items inside one device, which are accessible via CANopen network. Data items have specific type, for example UNSIGNED8, INTEGER32, VISIBLE_STRING, RECORD(structure in C), ARRAY, etc. Each data item within the object dictionary is addressed using a 16-bit index and an 8-bit sub-index.
+
+Objec dictionary editor is used for editing and creation of CANopenNode project specific files. Main project file is an XML file - device description file - _project.xml. It contains all CANopen specific information about one device. For example, it contains all the information, which are usually present in Electronic Data Sheel (EDS) file + much more. Other files created from device description file are: CANopen EDS file, HTML file as documentation and two C language files: CO_OD.h and CO_OD.c.
+
+Objec dictionary editor is a web application. Currently it has a little uncommon user interface. After files are created, they must be copy/pasted to regular text editor (notepad) and saved from there. Web application does not allow saving files directly.
+
+Prerequisites:
+
+    Mozilla Firefox version 3 - 16*.
+    If Firefox version is 4 or higher, following add-on must be installed: Remote-xul-manager
+    After installation and restart, go to Developer submenu, Remote XUL Manager. Click Add, write "<file>" in textbox and click OK.
+
+*Note:
+Since Firefox V17 there are problems with running OD editor application, because E4X is obsolete in Firefox. See https://developer.mozilla.org/en-US/docs/E4X.
+Untill OD editor will be updated please use Firefox V16 for running it: https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/16.0.2/.
+It is possible to run multiple versions of Firefox simultaneously: http://blog.oldversion.com/how-to-install-and-run-multiple-versions-of-firefox/.
+
+
+Usage:
+
+    Open "_project.html" in Firefox.
+    First textbox is loaded with the contents of "_project.xml" file (device description XML file).
+    Click "Open Editor".
+    Use the editor.
+    Click "Generate all files and return".
+    After a while (on some computers it may take some more) returns the previous screen with six filled textboxes.
+    Copy - Paste the text from textboxes into appropriate files. Don't forget copying the first textbox into the "_project.xml" file.
+
+
+CANopenNode Device description file format is specific for CANopenNode. Its body contain the following nodes:
+
+    Features - Features must be edited, before Objects. For example, if the number of RPDO is changed, corresponding objects (0x1400+ and 0x1600+) are added or removed automatically.
+    Objects - Objects from Device Object Dictionary. If '' is in the front of the index, it means that Object is disabled and won't be included in output files. However, CANopenNode Device description file will contain those objects.
+    Other - Other information about the device.
+

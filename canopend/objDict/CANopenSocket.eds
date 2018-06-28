@@ -5,20 +5,20 @@
 
 
 [FileInfo]
-FileName=CANopenSocket
-FileVersion=-
+FileName=BlueOcean_Fake_CiA401 IO
+FileVersion=0.001
 FileRevision=0
 EDSVersion=4.0
 Description=Open Source CANopen implementation
-CreationTime=12:05:34
-CreationDate=2016-07-26
-CreatedBy=JP
+CreationTime=12:39:04
+CreationDate=2018-06-28
+CreatedBy=Musarraf
 
 
 [DeviceInfo]
-VendorName=CANopenNode
-VendorNumber=0
-ProductName=CANopenNode
+VendorName=BlueOcean Robotics
+VendorNumber=160
+ProductName=BlueOcean Fake CiA401 IO
 ProductNumber=0
 RevisionNumber=0
 OrderCode=0
@@ -245,7 +245,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x00040191
+DefaultValue=0x00030191
 
 [1001]
 ParameterName=Error register
@@ -370,7 +370,7 @@ ObjectType=7
 DataType=0x0009
 AccessType=const
 PDOMapping=0
-DefaultValue=CANopenNode
+DefaultValue=BlueOcean Fake CiA401 IO
 
 [1009]
 ParameterName=Manufacturer hardware version
@@ -378,7 +378,7 @@ ObjectType=7
 DataType=0x0009
 AccessType=const
 PDOMapping=0
-DefaultValue=3.00
+DefaultValue=1.00
 
 [100A]
 ParameterName=Manufacturer software version
@@ -386,7 +386,7 @@ ObjectType=7
 DataType=0x0009
 AccessType=const
 PDOMapping=0
-DefaultValue=3.00
+DefaultValue=1.00
 
 [1010]
 ParameterName=Store parameters
@@ -518,7 +518,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=160
 
 [1018sub2]
 ParameterName=Product code
@@ -526,7 +526,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x00139F7E
 
 [1018sub3]
 ParameterName=Revision number
@@ -534,7 +534,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x1
 
 [1018sub4]
 ParameterName=Serial number
@@ -542,7 +542,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x71851998
 
 [1019]
 ParameterName=Synchronous counter overflow value
@@ -10138,5 +10138,4 @@ DataType=0x0003
 AccessType=rww
 PDOMapping=1
 DefaultValue=0
-
 

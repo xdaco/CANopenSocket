@@ -10,9 +10,9 @@ FileVersion=-
 FileRevision=0
 EDSVersion=4.0
 Description=Open Source CANopen implementation
-CreationTime=21:12:45
-CreationDate=2018-06-28
-CreatedBy=JP
+CreationTime=02:05:19
+CreationDate=2018-06-29
+CreatedBy=Musarraf Hossain
 
 
 [DeviceInfo]
@@ -158,87 +158,93 @@ SupportedObjects=87
 
 
 [ManufacturerObjects]
-SupportedObjects=80
+SupportedObjects=86
 1=0x2000
-2=0x2100
-3=0x2101
-4=0x2102
-5=0x2103
-6=0x2104
-7=0x2106
-8=0x2107
-9=0x2108
-10=0x2109
-11=0x2110
-12=0x2111
-13=0x2112
-14=0x2120
-15=0x2130
-16=0x2301
-17=0x2302
-18=0x2303
-19=0x2304
-20=0x2305
-21=0x2306
-22=0x2307
-23=0x2308
-24=0x2309
-25=0x230A
-26=0x230B
-27=0x230C
-28=0x230D
-29=0x230E
-30=0x230F
-31=0x2310
-32=0x2311
-33=0x2312
-34=0x2313
-35=0x2314
-36=0x2315
-37=0x2316
-38=0x2317
-39=0x2318
-40=0x2319
-41=0x231A
-42=0x231B
-43=0x231C
-44=0x231D
-45=0x231E
-46=0x231F
-47=0x2320
-48=0x2400
-49=0x2401
-50=0x2402
-51=0x2403
-52=0x2404
-53=0x2405
-54=0x2406
-55=0x2407
-56=0x2408
-57=0x2409
-58=0x240A
-59=0x240B
-60=0x240C
-61=0x240D
-62=0x240E
-63=0x240F
-64=0x2410
-65=0x2411
-66=0x2412
-67=0x2413
-68=0x2414
-69=0x2415
-70=0x2416
-71=0x2417
-72=0x2418
-73=0x2419
-74=0x241A
-75=0x241B
-76=0x241C
-77=0x241D
-78=0x241E
-79=0x241F
-80=0x2420
+2=0x2008
+3=0x200E
+4=0x2100
+5=0x2101
+6=0x2102
+7=0x2103
+8=0x2104
+9=0x2106
+10=0x2107
+11=0x2108
+12=0x2109
+13=0x210C
+14=0x210D
+15=0x210E
+16=0x210F
+17=0x2110
+18=0x2111
+19=0x2112
+20=0x2120
+21=0x2130
+22=0x2301
+23=0x2302
+24=0x2303
+25=0x2304
+26=0x2305
+27=0x2306
+28=0x2307
+29=0x2308
+30=0x2309
+31=0x230A
+32=0x230B
+33=0x230C
+34=0x230D
+35=0x230E
+36=0x230F
+37=0x2310
+38=0x2311
+39=0x2312
+40=0x2313
+41=0x2314
+42=0x2315
+43=0x2316
+44=0x2317
+45=0x2318
+46=0x2319
+47=0x231A
+48=0x231B
+49=0x231C
+50=0x231D
+51=0x231E
+52=0x231F
+53=0x2320
+54=0x2400
+55=0x2401
+56=0x2402
+57=0x2403
+58=0x2404
+59=0x2405
+60=0x2406
+61=0x2407
+62=0x2408
+63=0x2409
+64=0x240A
+65=0x240B
+66=0x240C
+67=0x240D
+68=0x240E
+69=0x240F
+70=0x2410
+71=0x2411
+72=0x2412
+73=0x2413
+74=0x2414
+75=0x2415
+76=0x2416
+77=0x2417
+78=0x2418
+79=0x2419
+80=0x241A
+81=0x241B
+82=0x241C
+83=0x241D
+84=0x241E
+85=0x241F
+86=0x2420
 
 [1000]
 ParameterName=Device type
@@ -246,7 +252,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=401
 
 [1001]
 ParameterName=Error register
@@ -371,7 +377,7 @@ ObjectType=7
 DataType=0x0009
 AccessType=const
 PDOMapping=0
-DefaultValue=CANopenNode
+DefaultValue=BlueOcean CiA401 Fake IO
 
 [1009]
 ParameterName=Manufacturer hardware version
@@ -379,7 +385,7 @@ ObjectType=7
 DataType=0x0009
 AccessType=const
 PDOMapping=0
-DefaultValue=3.00
+DefaultValue=1.00
 
 [100A]
 ParameterName=Manufacturer software version
@@ -387,7 +393,7 @@ ObjectType=7
 DataType=0x0009
 AccessType=const
 PDOMapping=0
-DefaultValue=3.00
+DefaultValue=1.00
 
 [1010]
 ParameterName=Store parameters
@@ -519,7 +525,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=BlueOcean
 
 [1018sub2]
 ParameterName=Product code
@@ -543,7 +549,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=9911028383
 
 [1019]
 ParameterName=Synchronous counter overflow value
@@ -4601,9 +4607,9 @@ SubNumber=3
 ParameterName=Number of entries
 ObjectType=7
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 PDOMapping=0
-DefaultValue=2
+DefaultValue=1
 
 [2000sub1]
 ParameterName=Cmd_CANGO 1
@@ -4620,6 +4626,22 @@ DataType=0x0004
 AccessType=rww
 PDOMapping=1
 DefaultValue=0
+
+[2008]
+ParameterName=Cmd_DOUT
+ObjectType=7
+DataType=0x0005
+AccessType=rww
+PDOMapping=1
+DefaultValue=0x02
+
+[200E]
+ParameterName=Cmd_MSTOP
+ObjectType=7
+DataType=0x0005
+AccessType=wo
+PDOMapping=1
+DefaultValue=0x0
 
 [2100]
 ParameterName=Error status bits
@@ -4656,23 +4678,23 @@ ObjectType=7
 DataType=0x0005
 AccessType=ro
 PDOMapping=0
-DefaultValue=2
+DefaultValue=1
 
 [2103sub1]
 ParameterName=Channel 1
 ObjectType=7
 DataType=0x0003
-AccessType=rw
-PDOMapping=0
-DefaultValue=4290
+AccessType=ro
+PDOMapping=1
+DefaultValue=3000
 
 [2103sub2]
 ParameterName=Channel 2
 ObjectType=7
 DataType=0x0003
-AccessType=rw
-PDOMapping=0
-DefaultValue=-4290
+AccessType=ro
+PDOMapping=1
+DefaultValue=-3000
 
 [2104]
 ParameterName=SYNC time
@@ -4744,12 +4766,12 @@ PDOMapping=1
 DefaultValue=0
 
 [2108]
-ParameterName=Temperature
+ParameterName=Qry_RELCNTR
 ObjectType=8
-SubNumber=2
+SubNumber=3
 
 [2108sub0]
-ParameterName=max sub-index
+ParameterName=Number of entries
 ObjectType=7
 DataType=0x0005
 AccessType=ro
@@ -4757,12 +4779,20 @@ PDOMapping=0
 DefaultValue=1
 
 [2108sub1]
-ParameterName=main PCB
+ParameterName=Channel 1
 ObjectType=7
-DataType=0x0003
+DataType=0x0004
 AccessType=ro
 PDOMapping=1
-DefaultValue=0
+DefaultValue=1000
+
+[2108sub2]
+ParameterName=Channel 2
+ObjectType=7
+DataType=0x0004
+AccessType=ro
+PDOMapping=1
+DefaultValue=2000
 
 [2109]
 ParameterName=Voltage
@@ -4784,6 +4814,117 @@ DataType=0x0003
 AccessType=ro
 PDOMapping=1
 DefaultValue=0
+
+[210C]
+ParameterName=Qry_BATAMPS
+ObjectType=8
+SubNumber=3
+
+[210Csub0]
+ParameterName=Number of entries
+ObjectType=7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+DefaultValue=1
+
+[210Csub1]
+ParameterName=Channel 1 BAT Amps
+ObjectType=7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+DefaultValue=02
+
+[210Csub2]
+ParameterName=Channel 2 BAT Amps
+ObjectType=7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+DefaultValue=02
+
+[210D]
+ParameterName=Qry_VOLTS
+ObjectType=8
+SubNumber=4
+
+[210Dsub0]
+ParameterName=Number of entries
+ObjectType=7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+DefaultValue=1
+
+[210Dsub1]
+ParameterName=V Int
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+DefaultValue=240
+
+[210Dsub2]
+ParameterName=V Bat
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+DefaultValue=260
+
+[210Dsub3]
+ParameterName=V 5Vout
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+DefaultValue=49
+
+[210E]
+ParameterName=Qry_DIGIN
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+DefaultValue=0xF0
+
+[210F]
+ParameterName=Qry_TEMP
+ObjectType=8
+SubNumber=4
+
+[210Fsub0]
+ParameterName=Number of entries
+ObjectType=7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+DefaultValue=1
+
+[210Fsub1]
+ParameterName=Qry_TEMP_MCU
+ObjectType=7
+DataType=0x0002
+AccessType=ro
+PDOMapping=1
+DefaultValue=900
+
+[210Fsub2]
+ParameterName=Qry_TEMP_CH1
+ObjectType=7
+DataType=0x0002
+AccessType=ro
+PDOMapping=1
+DefaultValue=1200
+
+[210Fsub3]
+ParameterName=Qry_TEMP_CH2
+ObjectType=7
+DataType=0x0002
+AccessType=ro
+PDOMapping=1
+DefaultValue=1200
 
 [2110]
 ParameterName=Variable Int32

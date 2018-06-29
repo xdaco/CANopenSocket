@@ -65,7 +65,7 @@ Permissible value for TPDO is 0 to 16. For larger value Max Index must be change
     </feature>
   </features>
   <CANopenObjectList>
-    <CANopenObject index="1000" name="Device type" objectType="7" memoryType="ROM" dataType="07" accessType="ro" PDOmapping="no" defaultValue="401">
+    <CANopenObject index="1000" name="Device type" objectType="7" memoryType="ROM" dataType="07" accessType="ro" PDOmapping="no" defaultValue="0x00000000">
       <label lang="en">Device type</label>
       <description lang="en">bit  0-15: Device profile number
 bit 16-31: Additional information</description>
@@ -118,15 +118,15 @@ bit    31: set to 0</description>
       <label lang="en">Synchronous window length</label>
       <description lang="en">bit 0-31:  window leghth after SYNC when PDOS must be transmited in µs, (0 = not used)</description>
     </CANopenObject>
-    <CANopenObject index="1008" name="Manufacturer device name" objectType="7" memoryType="ROM" dataType="09" accessType="const" PDOmapping="no" defaultValue="BlueOcean CiA401 Fake IO">
+    <CANopenObject index="1008" name="Manufacturer device name" objectType="7" memoryType="ROM" dataType="09" accessType="const" PDOmapping="no" defaultValue="CANopenNode">
       <label lang="en">Manufacturer device name</label>
       <description lang="en">Name of the manufacturer as string</description>
     </CANopenObject>
-    <CANopenObject index="1009" name="Manufacturer hardware version" objectType="7" memoryType="ROM" dataType="09" accessType="const" PDOmapping="no" defaultValue="1.00">
+    <CANopenObject index="1009" name="Manufacturer hardware version" objectType="7" memoryType="ROM" dataType="09" accessType="const" PDOmapping="no" defaultValue="3.00">
       <label lang="en">Manufacturer hardware version</label>
       <description lang="en">Name of the hardware version as string</description>
     </CANopenObject>
-    <CANopenObject index="100A" name="Manufacturer software version" objectType="7" memoryType="ROM" dataType="09" accessType="const" PDOmapping="no" defaultValue="1.00">
+    <CANopenObject index="100A" name="Manufacturer software version" objectType="7" memoryType="ROM" dataType="09" accessType="const" PDOmapping="no" defaultValue="3.00">
       <label lang="en">Manufacturer software version</label>
       <description lang="en">Name of the software version as string.</description>
     </CANopenObject>
@@ -187,10 +187,10 @@ bit 16-31: Major revision number (CANopen behavior has changed)
 Serial number
 bit 0-31: Manufacturer specific</description>
       <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="4"/>
-      <CANopenSubObject subIndex="01" name="Vendor-ID" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="BlueOcean"/>
+      <CANopenSubObject subIndex="01" name="Vendor-ID" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="0x00000000"/>
       <CANopenSubObject subIndex="02" name="Product code" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="0x00000000"/>
       <CANopenSubObject subIndex="03" name="Revision number" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="0x00000000"/>
-      <CANopenSubObject subIndex="04" name="Serial number" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="9911028383"/>
+      <CANopenSubObject subIndex="04" name="Serial number" objectType="7" dataType="07" accessType="ro" PDOmapping="no" defaultValue="0x00000000"/>
     </CANopenObject>
     <CANopenObject index="1019" name="Synchronous counter overflow value" objectType="7" memoryType="ROM" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0" accessFunctionName="CO_ODF_1019">
       <label lang="en">Synchronous counter overflow value</label>
@@ -1043,17 +1043,6 @@ bit 5: 0(1) - flying master process not (yes) supported
 bit 6: 0(1) - use bit 4 (ignore bit 4, stop all nodes)
 bit 7-31: reserved, set to 0</description>
     </CANopenObject>
-    <CANopenObject index="2000" name="Cmd_CANGO" objectType="8" subNumber="3" memoryType="RAM" dataType="04" accessType="rw" PDOmapping="optional">
-      <label lang="en">Speed Command</label>
-      <description lang="en">Speed reference over for motor in speed mode</description>
-      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="1"/>
-      <CANopenSubObject subIndex="01" name="Cmd_CANGO 1" objectType="7" defaultValue="0"/>
-      <CANopenSubObject subIndex="02" name="Cmd_CANGO 2" objectType="7" defaultValue="0"/>
-    </CANopenObject>
-    <CANopenObject index="2008" name="Cmd_DOUT" objectType="7" memoryType="RAM" dataType="05" accessType="rw" PDOmapping="optional" defaultValue="0x02">
-    </CANopenObject>
-    <CANopenObject index="200E" name="Cmd_MSTOP" objectType="7" memoryType="RAM" dataType="05" accessType="wo" PDOmapping="optional" defaultValue="0x0">
-    </CANopenObject>
     <CANopenObject index="2100" name="Error status bits" objectType="7" memoryType="RAM" dataType="0A" accessType="ro" PDOmapping="optional" defaultValue="00 00 00 00 00 00 00 00 00 00">
       <label lang="en">Error Status Bits</label>
       <description lang="en">Error Status Bits indicates error conditions inside stack or inside application. Specific bit is set by CO_errorReport() function, when error occurs in program. It can be reset by CO_errorReset() function, if error is solved. Emergency message is sent on each change of any Error Status Bit. If critical bits are set, node will not be able to stay in operational state. For more information see file CO_Emergency.h.
@@ -1122,7 +1111,7 @@ Generic errors (critical):
 
 Manufacturer specific errors:
 Manufacturer may define its own constants up to index 0xFF. Of course, he must then define large enough buffer for error status bits (up to 32 bytes).</description>
- </CANopenObject>
+    </CANopenObject>
     <CANopenObject index="2101" name="CAN node ID" objectType="7" memoryType="ROM" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0x20">
       <accessFunctionPreCode>if(WRITING){
   UNSIGNED8 var = *((UNSIGNED8*)dataBuff);
@@ -1146,17 +1135,10 @@ Valid values are from 1 to 127:</description>
 Valid values are in [kbps]:
 10, 20, 50, 125, 250, 500, 800, 1000</description>
     </CANopenObject>
-
-    
-
-    <CANopenObject index="2103" name="Qry_ABSPEED" objectType="8" subNumber="3" memoryType="RAM" dataType="03" accessType="ro" PDOmapping="optional">
-      <label lang="en">Speed Feedback</label>
-      <description lang="en">Channel 1 and Channel 2 speed feedback</description>
-      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="1"/>
-      <CANopenSubObject subIndex="01" name="Channel 1" objectType="7" defaultValue="3000"/>
-      <CANopenSubObject subIndex="02" name="Channel 2" objectType="7" defaultValue="-3000"/>
+    <CANopenObject index="2103" name="SYNC counter" objectType="7" memoryType="RAM" dataType="06" accessType="rw" PDOmapping="no" defaultValue="0">
+      <label lang="en">SYNC Counter</label>
+      <description lang="en">SYNC Counter is incremented each time, SYNC message is received or transmitted.</description>
     </CANopenObject>
-
     <CANopenObject index="2104" name="SYNC time" objectType="7" memoryType="RAM" dataType="06" accessType="ro" PDOmapping="no" defaultValue="0">
       <label lang="en">SYNC Time</label>
       <description lang="en">SYNC Time is incremented each timer period and reset to zero, each time SYNC is received or transmitted.</description>
@@ -1187,12 +1169,11 @@ main cycle max time - maximum mainline function cycle time in percent of timer p
       <CANopenSubObject subIndex="04" name="main cycle time" objectType="7" defaultValue="0"/>
       <CANopenSubObject subIndex="05" name="main cycle max time" objectType="7" defaultValue="0"/>
     </CANopenObject>
-    <CANopenObject index="2108" name="Qry_RELCNTR" objectType="8" subNumber="3" memoryType="RAM" dataType="04" accessType="ro" PDOmapping="optional">
+    <CANopenObject index="2108" name="Temperature" objectType="8" subNumber="2" memoryType="RAM" dataType="03" accessType="ro" PDOmapping="optional">
       <label lang="en">Temperature</label>
-      <description lang="en">Relative Encoder count</description>
-      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="1"/>
-      <CANopenSubObject subIndex="01" name="Channel 1" objectType="7" defaultValue="1000"/>
-      <CANopenSubObject subIndex="01" name="Channel 2" objectType="7" defaultValue="2000"/>
+      <description lang="en">Current temperature on device in 0,1°C.</description>
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="1"/>
+      <CANopenSubObject subIndex="01" name="main PCB" objectType="7" defaultValue="0"/>
     </CANopenObject>
     <CANopenObject index="2109" name="Voltage" objectType="8" subNumber="2" memoryType="RAM" dataType="03" accessType="ro" PDOmapping="optional">
       <label lang="en">Voltage</label>
@@ -1200,33 +1181,6 @@ main cycle max time - maximum mainline function cycle time in percent of timer p
       <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="1"/>
       <CANopenSubObject subIndex="01" name="main PCB supply" objectType="7" defaultValue="0"/>
     </CANopenObject>
-    
-    <CANopenObject index="210C" name="Qry_BATAMPS" objectType="8" subNumber="3" memoryType="RAM" dataType="03" accessType="ro" PDOmapping="optional">
-      <label lang="en">Current</label>
-      <description lang="en">Battery Current</description>
-      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="1"/>
-      <CANopenSubObject subIndex="01" name="Channel 1 BAT Amps" objectType="7" defaultValue="20"/>
-      <CANopenSubObject subIndex="02" name="Channel 2 BAT Amps" objectType="7" defaultValue="20"/>
-      </CANopenObject>
-
-    <CANopenObject index="210D" name="Qry_VOLTS" objectType="8" subNumber="4" memoryType="RAM" dataType="05" accessType="ro" PDOmapping="optional">
-      <label lang="en">Voltage</label>
-      <description lang="en">Battery Voltage, Internal 24V bus Voltage, 5V bus voltage</description>
-      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="1"/>
-      <CANopenSubObject subIndex="01" name="V Int" objectType="7" defaultValue="240"/>
-      <CANopenSubObject subIndex="02" name="V Bat" objectType="7" defaultValue="260"/>
-      <CANopenSubObject subIndex="03" name="V 5Vout" objectType="7" defaultValue="49"/>
-      </CANopenObject>
-      <CANopenObject index="210E" name="Qry_DIGIN" objectType="7" memoryType="RAM" dataType="07" accessType="ro" PDOmapping="optional" defaultValue="0xF0">
-    </CANopenObject>
-    <CANopenObject index="210F" name="Qry_TEMP" objectType="8" subNumber="4" memoryType="RAM" dataType="02" accessType="ro" PDOmapping="optional">
-      <label lang="en">Voltage</label>
-      <description lang="en">MCU and MOSFET Temperatures</description>
-      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="1"/>
-      <CANopenSubObject subIndex="01" name="Qry_TEMP_MCU" objectType="7" defaultValue="900"/>
-      <CANopenSubObject subIndex="02" name="Qry_TEMP_CH1" objectType="7" defaultValue="1200"/>
-      <CANopenSubObject subIndex="03" name="Qry_TEMP_CH2" objectType="7" defaultValue="1200"/>
-      </CANopenObject>
     <CANopenObject index="2110" name="Variable Int32" objectType="8" subNumber="33" memoryType="RAM" dataType="04" accessType="rw" PDOmapping="optional" TPDOdetectCOS="true">
       <label lang="en">Variable Integer 32bit</label>
       <description lang="en">Vartiable is free to use by application.</description>
@@ -2062,7 +2016,7 @@ Trigger time - If integer value passes 'TraceConfig-&gt;threshold', then time is
     </CANopenObject>
   </CANopenObjectList>
   <other>
-    <file fileName="CANopenSocket" fileCreator="Musarraf Hossain" fileCreationDate="2016-07-26" fileCreationTime="12:05:34" fileVersion="-"/>
+    <file fileName="CANopenSocket" fileCreator="JP" fileCreationDate="2016-07-26" fileCreationTime="12:05:34" fileVersion="-"/>
     <DeviceIdentity>
       <vendorName>CANopenNode</vendorName>
       <productName>CANopenNode</productName>

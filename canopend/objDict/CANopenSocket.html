@@ -98,15 +98,15 @@
               </tr>
               <tr>
                 <th>Creation Time</th>
-                <td>12:05:34</td>
+                <td>02:05:19</td>
               </tr>
               <tr>
                 <th>Creation Date</th>
-                <td>2016-07-26</td>
+                <td>2018-06-29</td>
               </tr>
               <tr>
                 <th>Created By</th>
-                <td>JP</td>
+                <td>Musarraf Hossain</td>
               </tr>
             </table>
           </ul>
@@ -172,7 +172,7 @@
                   <td/>
                 </tr>
                 <tr>
-                  <td>SYNC counter</td>
+                  <td>Qry_ABSPEED</td>
                   <td>2103</td>
                   <td/>
                   <td/>
@@ -415,7 +415,7 @@
         <li>
           <a docref="CANopenSocket_1000">1000</a>
           - Device type:
-          <input addr="1000000004" format="X32" pf="ro" value="0x00000000"/>
+          <input addr="1000000004" format="U32" pf="ro" value="401"/>
         </li>
         <li>
           <a docref="CANopenSocket_1001">1001</a>
@@ -486,17 +486,17 @@
         <li>
           <a docref="CANopenSocket_1008">1008</a>
           - Manufacturer device name:
-          <input addr="1008000011" format="S0b" pf="ro" value="CANopenNode"/>
+          <input addr="1008000024" format="S18" pf="ro" value="BlueOcean CiA401 Fake IO"/>
         </li>
         <li>
           <a docref="CANopenSocket_1009">1009</a>
           - Manufacturer hardware version:
-          <input addr="1009000004" format="S04" pf="ro" value="3.00"/>
+          <input addr="1009000004" format="S04" pf="ro" value="1.00"/>
         </li>
         <li>
           <a docref="CANopenSocket_100A">100A</a>
           - Manufacturer software version:
-          <input addr="100A000004" format="S04" pf="ro" value="3.00"/>
+          <input addr="100A000004" format="S04" pf="ro" value="1.00"/>
         </li>
         <li class="expandable">
           <a docref="CANopenSocket_1010">1010 - Store parameters</a>
@@ -573,7 +573,7 @@
             </li>
             <li>
               01 - Vendor-ID:
-              <input addr="1018010004" format="X32" pf="ro" value="0x00000000"/>
+              <input addr="1018010004" format="U32" pf="ro" value="BlueOcean"/>
             </li>
             <li>
               02 - Product code:
@@ -585,7 +585,7 @@
             </li>
             <li>
               04 - Serial number:
-              <input addr="1018040004" format="X32" pf="ro" value="0x00000000"/>
+              <input addr="1018040004" format="U32" pf="ro" value="9911028383"/>
             </li>
           </ul>
         </li>
@@ -2793,6 +2793,33 @@
           <input type="button" pf="butRead" value="Read marked"/>
           <input type="button" pf="butWrite" value="Write marked"/>
         </li>
+        <li class="expandable">
+          <a docref="CANopenSocket_2000">2000 - Cmd_CANGO</a>
+          <ul>
+            <li>
+              00 - Number of entries:
+              <input addr="2000000001" format="U08" pf="rrw" value="1"/>
+            </li>
+            <li>
+              01 - Cmd_CANGO 1:
+              <input addr="2000010004" format="I32" pf="rrw" value="0"/>
+            </li>
+            <li>
+              02 - Cmd_CANGO 2:
+              <input addr="2000020004" format="I32" pf="rrw" value="0"/>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a docref="CANopenSocket_2008">2008</a>
+          - Cmd_DOUT:
+          <input addr="2008000001" format="X08" pf="rrw" value="0x02"/>
+        </li>
+        <li>
+          <a docref="CANopenSocket_200E">200E</a>
+          - Cmd_MSTOP:
+          <input addr="200E000001" format="X08" pf="wo" value="0x0"/>
+        </li>
         <li>
           <a docref="CANopenSocket_2100">2100</a>
           - Error status bits:
@@ -2808,10 +2835,22 @@
           - CAN bit rate:
           <input addr="2102000002" format="U16" pf="rw" value="250"/>
         </li>
-        <li>
-          <a docref="CANopenSocket_2103">2103</a>
-          - SYNC counter:
-          <input addr="2103000002" format="U16" pf="rrw" value="0"/>
+        <li class="expandable">
+          <a docref="CANopenSocket_2103">2103 - Qry_ABSPEED</a>
+          <ul>
+            <li>
+              00 - Number of entries:
+              <input addr="2103000001" format="U08" pf="rro" value="1"/>
+            </li>
+            <li>
+              01 - Channel 1:
+              <input addr="2103010002" format="I16" pf="rro" value="3000"/>
+            </li>
+            <li>
+              02 - Channel 2:
+              <input addr="2103020002" format="I16" pf="rro" value="-3000"/>
+            </li>
+          </ul>
         </li>
         <li>
           <a docref="CANopenSocket_2104">2104</a>
@@ -2853,15 +2892,19 @@
           </ul>
         </li>
         <li class="expandable">
-          <a docref="CANopenSocket_2108">2108 - Temperature</a>
+          <a docref="CANopenSocket_2108">2108 - Qry_RELCNTR</a>
           <ul>
             <li>
-              00 - max sub-index:
+              00 - Number of entries:
               <input addr="2108000001" format="U08" pf="rro" value="1"/>
             </li>
             <li>
-              01 - main PCB:
-              <input addr="2108010002" format="I16" pf="rro" value="0"/>
+              01 - Channel 1:
+              <input addr="2108010004" format="I32" pf="rro" value="1000"/>
+            </li>
+            <li>
+              02 - Channel 2:
+              <input addr="2108020004" format="I32" pf="rro" value="2000"/>
             </li>
           </ul>
         </li>
@@ -2875,6 +2918,70 @@
             <li>
               01 - main PCB supply:
               <input addr="2109010002" format="I16" pf="rro" value="0"/>
+            </li>
+          </ul>
+        </li>
+        <li class="expandable">
+          <a docref="CANopenSocket_210C">210C - Qry_BATAMPS</a>
+          <ul>
+            <li>
+              00 - Number of entries:
+              <input addr="210C000001" format="U08" pf="rro" value="1"/>
+            </li>
+            <li>
+              01 - Channel 1 BAT Amps:
+              <input addr="210C010002" format="I16" pf="rro" value="02"/>
+            </li>
+            <li>
+              02 - Channel 2 BAT Amps:
+              <input addr="210C020002" format="I16" pf="rro" value="02"/>
+            </li>
+          </ul>
+        </li>
+        <li class="expandable">
+          <a docref="CANopenSocket_210D">210D - Qry_VOLTS</a>
+          <ul>
+            <li>
+              00 - Number of entries:
+              <input addr="210D000001" format="U08" pf="rro" value="1"/>
+            </li>
+            <li>
+              01 - V Int:
+              <input addr="210D010001" format="U08" pf="rro" value="240"/>
+            </li>
+            <li>
+              02 - V Bat:
+              <input addr="210D020001" format="U08" pf="rro" value="260"/>
+            </li>
+            <li>
+              03 - V 5Vout:
+              <input addr="210D030001" format="U08" pf="rro" value="49"/>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a docref="CANopenSocket_210E">210E</a>
+          - Qry_DIGIN:
+          <input addr="210E000004" format="X32" pf="rro" value="0xF0"/>
+        </li>
+        <li class="expandable">
+          <a docref="CANopenSocket_210F">210F - Qry_TEMP</a>
+          <ul>
+            <li>
+              00 - Number of entries:
+              <input addr="210F000001" format="U08" pf="rro" value="1"/>
+            </li>
+            <li>
+              01 - Qry_TEMP_MCU:
+              <input addr="210F010001" format="I08" pf="rro" value="900"/>
+            </li>
+            <li>
+              02 - Qry_TEMP_CH1:
+              <input addr="210F020001" format="I08" pf="rro" value="1200"/>
+            </li>
+            <li>
+              03 - Qry_TEMP_CH2:
+              <input addr="210F030001" format="I08" pf="rro" value="1200"/>
             </li>
           </ul>
         </li>
@@ -5799,7 +5906,7 @@
           <td>ro</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>401</td>
           <td/>
         </tr>
       </table>
@@ -6102,7 +6209,7 @@
           <td>const</td>
           <td>no</td>
           <td>no</td>
-          <td>CANopenNode</td>
+          <td>BlueOcean CiA401 Fake IO</td>
           <td/>
         </tr>
       </table>
@@ -6131,7 +6238,7 @@
           <td>const</td>
           <td>no</td>
           <td>no</td>
-          <td>3.00</td>
+          <td>1.00</td>
           <td/>
         </tr>
       </table>
@@ -6160,7 +6267,7 @@
           <td>const</td>
           <td>no</td>
           <td>no</td>
-          <td>3.00</td>
+          <td>1.00</td>
           <td/>
         </tr>
       </table>
@@ -6478,7 +6585,7 @@
           <td>ro</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>BlueOcean</td>
           <td/>
         </tr>
         <tr>
@@ -6508,7 +6615,7 @@
           <td>ro</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>9911028383</td>
           <td/>
         </tr>
       </table>
@@ -13557,6 +13664,110 @@
         </div>
       </div>
     </li>
+    <li id="CANopenSocket_2000">
+      <h3>2000 - Cmd_CANGO</h3>
+      <table>
+        <tr>
+          <th>Object Type</th>
+          <th>Sub Number</th>
+          <th>Memory Type</th>
+          <th>Data Type</th>
+          <th>Access Type</th>
+          <th>PDO Mapping</th>
+          <th>TPDO detects COS</th>
+        </tr>
+        <tr>
+          <td>Array</td>
+          <td>3</td>
+          <td>RAM</td>
+          <td>INTEGER32</td>
+          <td>rw</td>
+          <td>optional</td>
+          <td>no</td>
+        </tr>
+      </table>
+      <br/>
+      <table>
+        <tr>
+          <th>Subindex</th>
+          <th>Name</th>
+          <th>Default value</th>
+          <th>Actual value</th>
+        </tr>
+        <tr>
+          <td>00</td>
+          <td>Number of entries</td>
+          <td>1</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>Cmd_CANGO 1</td>
+          <td>0</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Cmd_CANGO 2</td>
+          <td>0</td>
+          <td/>
+        </tr>
+      </table>
+      <div class="description lang_en">
+        <h4>en: Speed Command</h4>
+        <div>Speed reference over for motor in speed mode</div>
+      </div>
+    </li>
+    <li id="CANopenSocket_2008">
+      <h3>2008 - Cmd_DOUT</h3>
+      <table>
+        <tr>
+          <th>Object Type</th>
+          <th>Memory Type</th>
+          <th>Data Type</th>
+          <th>Access Type</th>
+          <th>PDO Mapping</th>
+          <th>TPDO detects COS</th>
+          <th>Default value</th>
+          <th>Actual value</th>
+        </tr>
+        <tr>
+          <td>Var</td>
+          <td>RAM</td>
+          <td>UNSIGNED8</td>
+          <td>rw</td>
+          <td>optional</td>
+          <td>no</td>
+          <td>0x02</td>
+          <td/>
+        </tr>
+      </table>
+    </li>
+    <li id="CANopenSocket_200E">
+      <h3>200E - Cmd_MSTOP</h3>
+      <table>
+        <tr>
+          <th>Object Type</th>
+          <th>Memory Type</th>
+          <th>Data Type</th>
+          <th>Access Type</th>
+          <th>PDO Mapping</th>
+          <th>TPDO detects COS</th>
+          <th>Default value</th>
+          <th>Actual value</th>
+        </tr>
+        <tr>
+          <td>Var</td>
+          <td>RAM</td>
+          <td>UNSIGNED8</td>
+          <td>wo</td>
+          <td>optional</td>
+          <td>no</td>
+          <td>0x0</td>
+          <td/>
+        </tr>
+      </table>
+    </li>
     <li id="CANopenSocket_2100">
       <h3>2100 - Error status bits</h3>
       <table>
@@ -13781,32 +13992,57 @@
       </div>
     </li>
     <li id="CANopenSocket_2103">
-      <h3>2103 - SYNC counter</h3>
+      <h3>2103 - Qry_ABSPEED</h3>
       <table>
         <tr>
           <th>Object Type</th>
+          <th>Sub Number</th>
           <th>Memory Type</th>
           <th>Data Type</th>
           <th>Access Type</th>
           <th>PDO Mapping</th>
           <th>TPDO detects COS</th>
+        </tr>
+        <tr>
+          <td>Array</td>
+          <td>3</td>
+          <td>RAM</td>
+          <td>INTEGER16</td>
+          <td>ro</td>
+          <td>optional</td>
+          <td>no</td>
+        </tr>
+      </table>
+      <br/>
+      <table>
+        <tr>
+          <th>Subindex</th>
+          <th>Name</th>
           <th>Default value</th>
           <th>Actual value</th>
         </tr>
         <tr>
-          <td>Var</td>
-          <td>RAM</td>
-          <td>UNSIGNED16</td>
-          <td>rw</td>
-          <td>no</td>
-          <td>no</td>
-          <td>0</td>
+          <td>00</td>
+          <td>Number of entries</td>
+          <td>1</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>Channel 1</td>
+          <td>3000</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Channel 2</td>
+          <td>-3000</td>
           <td/>
         </tr>
       </table>
       <div class="description lang_en">
-        <h4>en: SYNC Counter</h4>
-        <div>SYNC Counter is incremented each time, SYNC message is received or transmitted.</div>
+        <h4>en: Speed Feedback</h4>
+        <div>Channel 1 and Channel 2 speed feedback</div>
       </div>
     </li>
     <li id="CANopenSocket_2104">
@@ -13953,7 +14189,7 @@
       </div>
     </li>
     <li id="CANopenSocket_2108">
-      <h3>2108 - Temperature</h3>
+      <h3>2108 - Qry_RELCNTR</h3>
       <table>
         <tr>
           <th>Object Type</th>
@@ -13966,9 +14202,9 @@
         </tr>
         <tr>
           <td>Array</td>
-          <td>2</td>
+          <td>3</td>
           <td>RAM</td>
-          <td>INTEGER16</td>
+          <td>INTEGER32</td>
           <td>ro</td>
           <td>optional</td>
           <td>no</td>
@@ -13984,20 +14220,26 @@
         </tr>
         <tr>
           <td>00</td>
-          <td>max sub-index</td>
+          <td>Number of entries</td>
           <td>1</td>
           <td/>
         </tr>
         <tr>
           <td>01</td>
-          <td>main PCB</td>
-          <td>0</td>
+          <td>Channel 1</td>
+          <td>1000</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Channel 2</td>
+          <td>2000</td>
           <td/>
         </tr>
       </table>
       <div class="description lang_en">
         <h4>en: Temperature</h4>
-        <div>Current temperature on device in 0,1°C.</div>
+        <div>Relative Encoder count</div>
       </div>
     </li>
     <li id="CANopenSocket_2109">
@@ -14046,6 +14288,205 @@
       <div class="description lang_en">
         <h4>en: Voltage</h4>
         <div>Current voltage on device in 0,1V.</div>
+      </div>
+    </li>
+    <li id="CANopenSocket_210C">
+      <h3>210C - Qry_BATAMPS</h3>
+      <table>
+        <tr>
+          <th>Object Type</th>
+          <th>Sub Number</th>
+          <th>Memory Type</th>
+          <th>Data Type</th>
+          <th>Access Type</th>
+          <th>PDO Mapping</th>
+          <th>TPDO detects COS</th>
+        </tr>
+        <tr>
+          <td>Array</td>
+          <td>3</td>
+          <td>RAM</td>
+          <td>INTEGER16</td>
+          <td>ro</td>
+          <td>optional</td>
+          <td>no</td>
+        </tr>
+      </table>
+      <br/>
+      <table>
+        <tr>
+          <th>Subindex</th>
+          <th>Name</th>
+          <th>Default value</th>
+          <th>Actual value</th>
+        </tr>
+        <tr>
+          <td>00</td>
+          <td>Number of entries</td>
+          <td>1</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>Channel 1 BAT Amps</td>
+          <td>02</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Channel 2 BAT Amps</td>
+          <td>02</td>
+          <td/>
+        </tr>
+      </table>
+      <div class="description lang_en">
+        <h4>en: Current</h4>
+        <div>Battery Current</div>
+      </div>
+    </li>
+    <li id="CANopenSocket_210D">
+      <h3>210D - Qry_VOLTS</h3>
+      <table>
+        <tr>
+          <th>Object Type</th>
+          <th>Sub Number</th>
+          <th>Memory Type</th>
+          <th>Data Type</th>
+          <th>Access Type</th>
+          <th>PDO Mapping</th>
+          <th>TPDO detects COS</th>
+        </tr>
+        <tr>
+          <td>Array</td>
+          <td>4</td>
+          <td>RAM</td>
+          <td>UNSIGNED8</td>
+          <td>ro</td>
+          <td>optional</td>
+          <td>no</td>
+        </tr>
+      </table>
+      <br/>
+      <table>
+        <tr>
+          <th>Subindex</th>
+          <th>Name</th>
+          <th>Default value</th>
+          <th>Actual value</th>
+        </tr>
+        <tr>
+          <td>00</td>
+          <td>Number of entries</td>
+          <td>1</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>V Int</td>
+          <td>240</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>V Bat</td>
+          <td>260</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>V 5Vout</td>
+          <td>49</td>
+          <td/>
+        </tr>
+      </table>
+      <div class="description lang_en">
+        <h4>en: Voltage</h4>
+        <div>Battery Voltage, Internal 24V bus Voltage, 5V bus voltage</div>
+      </div>
+    </li>
+    <li id="CANopenSocket_210E">
+      <h3>210E - Qry_DIGIN</h3>
+      <table>
+        <tr>
+          <th>Object Type</th>
+          <th>Memory Type</th>
+          <th>Data Type</th>
+          <th>Access Type</th>
+          <th>PDO Mapping</th>
+          <th>TPDO detects COS</th>
+          <th>Default value</th>
+          <th>Actual value</th>
+        </tr>
+        <tr>
+          <td>Var</td>
+          <td>RAM</td>
+          <td>UNSIGNED32</td>
+          <td>ro</td>
+          <td>optional</td>
+          <td>no</td>
+          <td>0xF0</td>
+          <td/>
+        </tr>
+      </table>
+    </li>
+    <li id="CANopenSocket_210F">
+      <h3>210F - Qry_TEMP</h3>
+      <table>
+        <tr>
+          <th>Object Type</th>
+          <th>Sub Number</th>
+          <th>Memory Type</th>
+          <th>Data Type</th>
+          <th>Access Type</th>
+          <th>PDO Mapping</th>
+          <th>TPDO detects COS</th>
+        </tr>
+        <tr>
+          <td>Array</td>
+          <td>4</td>
+          <td>RAM</td>
+          <td>INTEGER8</td>
+          <td>ro</td>
+          <td>optional</td>
+          <td>no</td>
+        </tr>
+      </table>
+      <br/>
+      <table>
+        <tr>
+          <th>Subindex</th>
+          <th>Name</th>
+          <th>Default value</th>
+          <th>Actual value</th>
+        </tr>
+        <tr>
+          <td>00</td>
+          <td>Number of entries</td>
+          <td>1</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>Qry_TEMP_MCU</td>
+          <td>900</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Qry_TEMP_CH1</td>
+          <td>1200</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>Qry_TEMP_CH2</td>
+          <td>1200</td>
+          <td/>
+        </tr>
+      </table>
+      <div class="description lang_en">
+        <h4>en: Voltage</h4>
+        <div>MCU and MOSFET Temperatures</div>
       </div>
     </li>
     <li id="CANopenSocket_2110">

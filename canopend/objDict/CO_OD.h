@@ -60,9 +60,9 @@
    FILE INFO:
       FileName:     CANopenSocket
       FileVersion:  -
-      CreationTime: 21:31:03
-      CreationDate: 2018-06-28
-      CreatedBy:    JP
+      CreationTime: 02:17:18
+      CreationDate: 2018-06-29
+      CreatedBy:    Musarraf Hossain
 *******************************************************************************/
 
 
@@ -91,7 +91,7 @@
 /*******************************************************************************
    OBJECT DICTIONARY
 *******************************************************************************/
-   #define CO_OD_NoOfElements             170
+   #define CO_OD_NoOfElements             176
 
 
 /*******************************************************************************
@@ -214,11 +214,17 @@ struct sCO_OD_RAM{
 /*1280[1]   */ OD_SDOClientParameter_t SDOClientParameter[1];
 /*2000      */ INTEGER32      cmd_CANGO[2];
 /*2008      */ UNSIGNED8      cmd_DOUT;
+/*200E      */ UNSIGNED8      cmd_MSTOP;
 /*2100      */ OCTET_STRING   errorStatusBits[10];
 /*2103      */ INTEGER16      qry_ABSPEED[2];
 /*2104      */ UNSIGNED16     SYNCTime;
 /*2107      */ UNSIGNED16     performance[5];
+/*2108      */ INTEGER32      qry_RELCNTR[2];
 /*2109      */ INTEGER16      voltage[1];
+/*210C      */ INTEGER16      qry_BATAMPS[2];
+/*210D      */ UNSIGNED8      qry_VOLTS[3];
+/*210E      */ UNSIGNED32     qry_DIGIN;
+/*210F      */ INTEGER8       qry_TEMP[3];
 /*2110      */ INTEGER32      variableInt32[32];
 /*2120      */ OD_testVar_t   testVar;
 /*2130      */ OD_time_t      time;
@@ -251,7 +257,7 @@ struct sCO_OD_ROM{
 /*1005      */ UNSIGNED32     COB_ID_SYNCMessage;
 /*1006      */ UNSIGNED32     communicationCyclePeriod;
 /*1007      */ UNSIGNED32     synchronousWindowLength;
-/*1008      */ VISIBLE_STRING manufacturerDeviceName[30];
+/*1008      */ VISIBLE_STRING manufacturerDeviceName[24];
 /*1009      */ VISIBLE_STRING manufacturerHardwareVersion[4];
 /*100A      */ VISIBLE_STRING manufacturerSoftwareVersion[4];
 /*1014      */ UNSIGNED32     COB_ID_EMCY;
@@ -309,9 +315,9 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 /*1007, Data Type: UNSIGNED32 */
       #define OD_synchronousWindowLength                 CO_OD_ROM.synchronousWindowLength
 
-/*1008, Data Type: VISIBLE_STRING, Array[30] */
+/*1008, Data Type: VISIBLE_STRING, Array[24] */
       #define OD_manufacturerDeviceName                  CO_OD_ROM.manufacturerDeviceName
-      #define ODL_manufacturerDeviceName_stringLength    30
+      #define ODL_manufacturerDeviceName_stringLength    24
 
 /*1009, Data Type: VISIBLE_STRING, Array[4] */
       #define OD_manufacturerHardwareVersion             CO_OD_ROM.manufacturerHardwareVersion
@@ -390,6 +396,9 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 /*2008, Data Type: UNSIGNED8 */
       #define OD_cmd_DOUT                                CO_OD_RAM.cmd_DOUT
 
+/*200E, Data Type: UNSIGNED8 */
+      #define OD_cmd_MSTOP                               CO_OD_RAM.cmd_MSTOP
+
 /*2100, Data Type: OCTET_STRING, Array[10] */
       #define OD_errorStatusBits                         CO_OD_RAM.errorStatusBits
       #define ODL_errorStatusBits_stringLength           10
@@ -421,10 +430,39 @@ extern struct sCO_OD_ROM CO_OD_ROM;
       #define ODA_performance_mainCycleTime              3
       #define ODA_performance_mainCycleMaxTime           4
 
+/*2108, Data Type: INTEGER32, Array[2] */
+      #define OD_qry_RELCNTR                             CO_OD_RAM.qry_RELCNTR
+      #define ODL_qry_RELCNTR_arrayLength                2
+      #define ODA_qry_RELCNTR_channel1                   0
+      #define ODA_qry_RELCNTR_channel2                   1
+
 /*2109, Data Type: INTEGER16, Array[1] */
       #define OD_voltage                                 CO_OD_RAM.voltage
       #define ODL_voltage_arrayLength                    1
       #define ODA_voltage_mainPCBSupply                  0
+
+/*210C, Data Type: INTEGER16, Array[2] */
+      #define OD_qry_BATAMPS                             CO_OD_RAM.qry_BATAMPS
+      #define ODL_qry_BATAMPS_arrayLength                2
+      #define ODA_qry_BATAMPS_channel1BATAmps            0
+      #define ODA_qry_BATAMPS_channel2BATAmps            1
+
+/*210D, Data Type: UNSIGNED8, Array[3] */
+      #define OD_qry_VOLTS                               CO_OD_RAM.qry_VOLTS
+      #define ODL_qry_VOLTS_arrayLength                  3
+      #define ODA_qry_VOLTS_VInt                         0
+      #define ODA_qry_VOLTS_VBat                         1
+      #define ODA_qry_VOLTS_V5Vout                       2
+
+/*210E, Data Type: UNSIGNED32 */
+      #define OD_qry_DIGIN                               CO_OD_RAM.qry_DIGIN
+
+/*210F, Data Type: INTEGER8, Array[3] */
+      #define OD_qry_TEMP                                CO_OD_RAM.qry_TEMP
+      #define ODL_qry_TEMP_arrayLength                   3
+      #define ODA_qry_TEMP_qry_TEMP_MCU                  0
+      #define ODA_qry_TEMP_qry_TEMP_CH1                  1
+      #define ODA_qry_TEMP_qry_TEMP_CH2                  2
 
 /*2110, Data Type: INTEGER32, Array[32] */
       #define OD_variableInt32                           CO_OD_RAM.variableInt32

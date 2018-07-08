@@ -98,11 +98,11 @@
               </tr>
               <tr>
                 <th>Creation Time</th>
-                <td>02:05:19</td>
+                <td>23:45:10</td>
               </tr>
               <tr>
                 <th>Creation Date</th>
-                <td>2018-06-29</td>
+                <td>2018-07-08</td>
               </tr>
               <tr>
                 <th>Created By</th>
@@ -1618,7 +1618,7 @@
             </li>
             <li>
               05 - event timer:
-              <input addr="1800050002" format="U16" pf="rw" value="0"/>
+              <input addr="1800050002" format="U16" pf="rw" value="250"/>
             </li>
             <li>
               06 - SYNC start value:
@@ -1639,11 +1639,11 @@
             </li>
             <li>
               02 - transmission type:
-              <input addr="1801020001" format="U08" pf="rw" value="254"/>
+              <input addr="1801020001" format="U08" pf="rw" value="255"/>
             </li>
             <li>
               03 - inhibit time:
-              <input addr="1801030002" format="U16" pf="rw" value="0"/>
+              <input addr="1801030002" format="U16" pf="rw" value="100"/>
             </li>
             <li>
               04 - compatibility entry:
@@ -1651,7 +1651,7 @@
             </li>
             <li>
               05 - event timer:
-              <input addr="1801050002" format="U16" pf="rw" value="0"/>
+              <input addr="1801050002" format="U16" pf="rw" value="250"/>
             </li>
             <li>
               06 - SYNC start value:
@@ -1672,11 +1672,11 @@
             </li>
             <li>
               02 - transmission type:
-              <input addr="1802020001" format="U08" pf="rw" value="254"/>
+              <input addr="1802020001" format="U08" pf="rw" value="255"/>
             </li>
             <li>
               03 - inhibit time:
-              <input addr="1802030002" format="U16" pf="rw" value="0"/>
+              <input addr="1802030002" format="U16" pf="rw" value="100"/>
             </li>
             <li>
               04 - compatibility entry:
@@ -1684,7 +1684,7 @@
             </li>
             <li>
               05 - event timer:
-              <input addr="1802050002" format="U16" pf="rw" value="0"/>
+              <input addr="1802050002" format="U16" pf="rw" value="250"/>
             </li>
             <li>
               06 - SYNC start value:
@@ -2130,11 +2130,11 @@
             </li>
             <li>
               01 - mapped object 1:
-              <input addr="1A00010004" format="X32" pf="rw" value="0x60000108"/>
+              <input addr="1A00010004" format="X32" pf="rw" value="0x21030110"/>
             </li>
             <li>
               02 - mapped object 2:
-              <input addr="1A00020004" format="X32" pf="rw" value="0x60000208"/>
+              <input addr="1A00020004" format="X32" pf="rw" value="0x21030210"/>
             </li>
             <li>
               03 - mapped object 3:
@@ -2171,11 +2171,11 @@
             </li>
             <li>
               01 - mapped object 1:
-              <input addr="1A01010004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A01010004" format="X32" pf="rw" value="0x210C0110"/>
             </li>
             <li>
               02 - mapped object 2:
-              <input addr="1A01020004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A01020004" format="X32" pf="rw" value="0x210C0210"/>
             </li>
             <li>
               03 - mapped object 3:
@@ -2212,11 +2212,11 @@
             </li>
             <li>
               01 - mapped object 1:
-              <input addr="1A02010004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A02010004" format="X32" pf="rw" value="0x210D0208"/>
             </li>
             <li>
               02 - mapped object 2:
-              <input addr="1A02020004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A02020004" format="X32" pf="rw" value="0x210D0308"/>
             </li>
             <li>
               03 - mapped object 3:
@@ -2930,11 +2930,11 @@
             </li>
             <li>
               01 - Channel 1 BAT Amps:
-              <input addr="210C010002" format="I16" pf="rro" value="02"/>
+              <input addr="210C010002" format="I16" pf="rro" value="20"/>
             </li>
             <li>
               02 - Channel 2 BAT Amps:
-              <input addr="210C020002" format="I16" pf="rro" value="02"/>
+              <input addr="210C020002" format="I16" pf="rro" value="20"/>
             </li>
           </ul>
         </li>
@@ -10008,7 +10008,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>$NODEID+0x180</td>
           <td/>
@@ -10018,7 +10018,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>255</td>
           <td/>
@@ -10028,7 +10028,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>100</td>
           <td/>
@@ -10048,9 +10048,9 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>0</td>
+          <td>250</td>
           <td/>
         </tr>
         <tr>
@@ -10058,7 +10058,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10162,7 +10162,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>$NODEID+0x280</td>
           <td/>
@@ -10172,9 +10172,9 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>254</td>
+          <td>255</td>
           <td/>
         </tr>
         <tr>
@@ -10182,9 +10182,9 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>0</td>
+          <td>100</td>
           <td/>
         </tr>
         <tr>
@@ -10202,9 +10202,9 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>0</td>
+          <td>250</td>
           <td/>
         </tr>
         <tr>
@@ -10212,7 +10212,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10264,7 +10264,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>$NODEID+0x380</td>
           <td/>
@@ -10274,9 +10274,9 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>254</td>
+          <td>255</td>
           <td/>
         </tr>
         <tr>
@@ -10284,9 +10284,9 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>0</td>
+          <td>100</td>
           <td/>
         </tr>
         <tr>
@@ -10304,9 +10304,9 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>0</td>
+          <td>250</td>
           <td/>
         </tr>
         <tr>
@@ -10314,7 +10314,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11694,7 +11694,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x60000108</td>
+          <td>0x21030110</td>
           <td/>
         </tr>
         <tr>
@@ -11704,7 +11704,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x60000208</td>
+          <td>0x21030210</td>
           <td/>
         </tr>
         <tr>
@@ -11829,7 +11829,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210C0110</td>
           <td/>
         </tr>
         <tr>
@@ -11839,7 +11839,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210C0210</td>
           <td/>
         </tr>
         <tr>
@@ -11951,7 +11951,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210D0208</td>
           <td/>
         </tr>
         <tr>
@@ -11961,7 +11961,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210D0308</td>
           <td/>
         </tr>
         <tr>
@@ -14329,13 +14329,13 @@
         <tr>
           <td>01</td>
           <td>Channel 1 BAT Amps</td>
-          <td>02</td>
+          <td>20</td>
           <td/>
         </tr>
         <tr>
           <td>02</td>
           <td>Channel 2 BAT Amps</td>
-          <td>02</td>
+          <td>20</td>
           <td/>
         </tr>
       </table>

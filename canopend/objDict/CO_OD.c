@@ -174,9 +174,9 @@ struct sCO_OD_EEPROM CO_OD_EEPROM = {
 /*160D*/ {0x0, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L},
 /*160E*/ {0x0, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L},
 /*160F*/ {0x0, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L}},
-/*1800*/{{0x6, 0x180L, 0xFF, 0x64, 0x0, 0x0, 0x0},
-/*1801*/ {0x6, 0x280L, 0xFE, 0x0, 0x0, 0x0, 0x0},
-/*1802*/ {0x6, 0x380L, 0xFE, 0x0, 0x0, 0x0, 0x0},
+/*1800*/{{0x6, 0x180L, 0xFF, 0x64, 0x0, 0xFA, 0x0},
+/*1801*/ {0x6, 0x280L, 0xFF, 0x64, 0x0, 0xFA, 0x0},
+/*1802*/ {0x6, 0x380L, 0xFF, 0x64, 0x0, 0xFA, 0x0},
 /*1803*/ {0x6, 0x480L, 0xFE, 0x0, 0x0, 0x0, 0x0},
 /*1804*/ {0x6, 0x80000000L, 0xFE, 0x0, 0x0, 0x0, 0x0},
 /*1805*/ {0x6, 0x80000000L, 0xFE, 0x0, 0x0, 0x0, 0x0},
@@ -190,9 +190,9 @@ struct sCO_OD_EEPROM CO_OD_EEPROM = {
 /*180D*/ {0x6, 0x80000000L, 0xFE, 0x0, 0x0, 0x0, 0x0},
 /*180E*/ {0x6, 0x80000000L, 0xFE, 0x0, 0x0, 0x0, 0x0},
 /*180F*/ {0x6, 0x80000000L, 0xFE, 0x0, 0x0, 0x0, 0x0}},
-/*1A00*/{{0x2, 0x60000108L, 0x60000208L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L},
-/*1A01*/ {0x0, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L},
-/*1A02*/ {0x0, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L},
+/*1A00*/{{0x2, 0x21030110L, 0x21030210L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L},
+/*1A01*/ {0x0, 0x210C0110L, 0x210C0210L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L},
+/*1A02*/ {0x0, 0x210D0208L, 0x210D0308L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L},
 /*1A03*/ {0x0, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L},
 /*1A04*/ {0x0, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L},
 /*1A05*/ {0x0, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L, 0x0L},
@@ -491,28 +491,28 @@ struct sCO_OD_EEPROM CO_OD_EEPROM = {
            {(void*)&CO_OD_ROM.RPDOMappingParameter[15].mappedObject8, 0x8D,  4}};
 /*0x1800*/ const CO_OD_entryRecord_t OD_record1800[7] = {
            {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].maxSubIndex, 0x05,  1},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].COB_IDUsedByTPDO, 0x8D,  4},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].transmissionType, 0x0D,  1},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].inhibitTime, 0x8D,  2},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].COB_IDUsedByTPDO, 0xBD,  4},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].transmissionType, 0x3D,  1},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].inhibitTime, 0xBD,  2},
            {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].compatibilityEntry, 0x0D,  1},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].eventTimer, 0x8D,  2},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].SYNCStartValue, 0x0D,  1}};
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].eventTimer, 0xBD,  2},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[0].SYNCStartValue, 0x3D,  1}};
 /*0x1801*/ const CO_OD_entryRecord_t OD_record1801[7] = {
            {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].maxSubIndex, 0x05,  1},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].COB_IDUsedByTPDO, 0x8D,  4},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].transmissionType, 0x0D,  1},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].inhibitTime, 0x8D,  2},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].COB_IDUsedByTPDO, 0xBD,  4},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].transmissionType, 0x3D,  1},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].inhibitTime, 0xBD,  2},
            {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].compatibilityEntry, 0x0D,  1},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].eventTimer, 0x8D,  2},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].SYNCStartValue, 0x0D,  1}};
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].eventTimer, 0xBD,  2},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[1].SYNCStartValue, 0x3D,  1}};
 /*0x1802*/ const CO_OD_entryRecord_t OD_record1802[7] = {
            {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].maxSubIndex, 0x05,  1},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].COB_IDUsedByTPDO, 0x8D,  4},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].transmissionType, 0x0D,  1},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].inhibitTime, 0x8D,  2},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].COB_IDUsedByTPDO, 0xBD,  4},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].transmissionType, 0x3D,  1},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].inhibitTime, 0xBD,  2},
            {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].compatibilityEntry, 0x0D,  1},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].eventTimer, 0x8D,  2},
-           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].SYNCStartValue, 0x0D,  1}};
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].eventTimer, 0xBD,  2},
+           {(void*)&CO_OD_ROM.TPDOCommunicationParameter[2].SYNCStartValue, 0x3D,  1}};
 /*0x1803*/ const CO_OD_entryRecord_t OD_record1803[7] = {
            {(void*)&CO_OD_ROM.TPDOCommunicationParameter[3].maxSubIndex, 0x05,  1},
            {(void*)&CO_OD_ROM.TPDOCommunicationParameter[3].COB_IDUsedByTPDO, 0x8D,  4},
@@ -1548,3 +1548,4 @@ const CO_OD_entry_t CO_OD[CO_OD_NoOfElements] = {
 {0x6401, 0x0C, 0xB6,  2, (void*)&CO_OD_RAM.readAnalogueInput16Bit[0]},
 {0x6411, 0x08, 0xBE,  2, (void*)&CO_OD_RAM.writeAnalogueOutput16Bit[0]},
 };
+

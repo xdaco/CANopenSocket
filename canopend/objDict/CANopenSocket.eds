@@ -10,8 +10,8 @@ FileVersion=-
 FileRevision=0
 EDSVersion=4.0
 Description=Open Source CANopen implementation
-CreationTime=02:05:19
-CreationDate=2018-06-29
+CreationTime=23:45:10
+CreationDate=2018-07-08
 CreatedBy=Musarraf Hossain
 
 
@@ -2399,24 +2399,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=$NODEID+0x180
 
 [1800sub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=255
 
 [1800sub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=100
 
 [1800sub4]
@@ -2431,16 +2431,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
-DefaultValue=0
+AccessType=rww
+PDOMapping=1
+DefaultValue=250
 
 [1800sub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1801]
@@ -2460,25 +2460,25 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=$NODEID+0x280
 
 [1801sub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
-DefaultValue=254
+AccessType=rww
+PDOMapping=1
+DefaultValue=255
 
 [1801sub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
-DefaultValue=0
+AccessType=rww
+PDOMapping=1
+DefaultValue=100
 
 [1801sub4]
 ParameterName=compatibility entry
@@ -2492,16 +2492,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
-DefaultValue=0
+AccessType=rww
+PDOMapping=1
+DefaultValue=250
 
 [1801sub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1802]
@@ -2521,25 +2521,25 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=$NODEID+0x380
 
 [1802sub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
-DefaultValue=254
+AccessType=rww
+PDOMapping=1
+DefaultValue=255
 
 [1802sub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
-DefaultValue=0
+AccessType=rww
+PDOMapping=1
+DefaultValue=100
 
 [1802sub4]
 ParameterName=compatibility entry
@@ -2553,16 +2553,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
-DefaultValue=0
+AccessType=rww
+PDOMapping=1
+DefaultValue=250
 
 [1802sub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1803]
@@ -3377,7 +3377,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x60000108
+DefaultValue=0x21030110
 
 [1A00sub2]
 ParameterName=mapped object 2
@@ -3385,7 +3385,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x60000208
+DefaultValue=0x21030210
 
 [1A00sub3]
 ParameterName=mapped object 3
@@ -3454,7 +3454,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210C0110
 
 [1A01sub2]
 ParameterName=mapped object 2
@@ -3462,7 +3462,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210C0210
 
 [1A01sub3]
 ParameterName=mapped object 3
@@ -3531,7 +3531,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210D0208
 
 [1A02sub2]
 ParameterName=mapped object 2
@@ -3539,7 +3539,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210D0308
 
 [1A02sub3]
 ParameterName=mapped object 3
@@ -4834,7 +4834,7 @@ ObjectType=7
 DataType=0x0003
 AccessType=ro
 PDOMapping=1
-DefaultValue=02
+DefaultValue=20
 
 [210Csub2]
 ParameterName=Channel 2 BAT Amps
@@ -4842,7 +4842,7 @@ ObjectType=7
 DataType=0x0003
 AccessType=ro
 PDOMapping=1
-DefaultValue=02
+DefaultValue=20
 
 [210D]
 ParameterName=Qry_VOLTS
@@ -10330,4 +10330,5 @@ DataType=0x0003
 AccessType=rww
 PDOMapping=1
 DefaultValue=0
+
 

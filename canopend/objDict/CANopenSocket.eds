@@ -10,8 +10,8 @@ FileVersion=-
 FileRevision=0
 EDSVersion=4.0
 Description=Open Source CANopen implementation
-CreationTime=23:45:10
-CreationDate=2018-07-08
+CreationTime=00:47:27
+CreationDate=2018-07-09
 CreatedBy=Musarraf Hossain
 
 
@@ -3369,7 +3369,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=rw
 PDOMapping=0
-DefaultValue=2
+DefaultValue=4
 
 [1A00sub1]
 ParameterName=mapped object 1
@@ -3393,7 +3393,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210C0110
 
 [1A00sub4]
 ParameterName=mapped object 4
@@ -3401,7 +3401,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210C0210
 
 [1A00sub5]
 ParameterName=mapped object 5
@@ -3446,7 +3446,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=rw
 PDOMapping=0
-DefaultValue=0
+DefaultValue=8
 
 [1A01sub1]
 ParameterName=mapped object 1
@@ -3470,7 +3470,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210D0108
 
 [1A01sub4]
 ParameterName=mapped object 4
@@ -3478,7 +3478,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210D0208
 
 [1A01sub5]
 ParameterName=mapped object 5
@@ -3486,7 +3486,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210D0308
 
 [1A01sub6]
 ParameterName=mapped object 6
@@ -3494,7 +3494,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0
 
 [1A01sub7]
 ParameterName=mapped object 7
@@ -3523,7 +3523,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=rw
 PDOMapping=0
-DefaultValue=0
+DefaultValue=8
 
 [1A02sub1]
 ParameterName=mapped object 1
@@ -3531,7 +3531,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x210D0208
+DefaultValue=0x210E0020
 
 [1A02sub2]
 ParameterName=mapped object 2
@@ -3539,7 +3539,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x210D0308
+DefaultValue=0x210F0108
 
 [1A02sub3]
 ParameterName=mapped object 3
@@ -3547,7 +3547,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210F0208
 
 [1A02sub4]
 ParameterName=mapped object 4
@@ -3555,7 +3555,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210F0308
 
 [1A02sub5]
 ParameterName=mapped object 5
@@ -3563,7 +3563,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0
 
 [1A02sub6]
 ParameterName=mapped object 6
@@ -4826,7 +4826,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=rw
 PDOMapping=0
-DefaultValue=1
+DefaultValue=2
 
 [210Csub1]
 ParameterName=Channel 1 BAT Amps
@@ -4834,7 +4834,7 @@ ObjectType=7
 DataType=0x0003
 AccessType=ro
 PDOMapping=1
-DefaultValue=20
+DefaultValue=200
 
 [210Csub2]
 ParameterName=Channel 2 BAT Amps
@@ -4842,7 +4842,7 @@ ObjectType=7
 DataType=0x0003
 AccessType=ro
 PDOMapping=1
-DefaultValue=20
+DefaultValue=300
 
 [210D]
 ParameterName=Qry_VOLTS
@@ -4871,7 +4871,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=ro
 PDOMapping=1
-DefaultValue=260
+DefaultValue=230
 
 [210Dsub3]
 ParameterName=V 5Vout
@@ -4879,7 +4879,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=ro
 PDOMapping=1
-DefaultValue=49
+DefaultValue=50
 
 [210E]
 ParameterName=Qry_DIGIN
@@ -4908,7 +4908,7 @@ ObjectType=7
 DataType=0x0002
 AccessType=ro
 PDOMapping=1
-DefaultValue=900
+DefaultValue=120
 
 [210Fsub2]
 ParameterName=Qry_TEMP_CH1
@@ -4916,7 +4916,7 @@ ObjectType=7
 DataType=0x0002
 AccessType=ro
 PDOMapping=1
-DefaultValue=1200
+DefaultValue=125
 
 [210Fsub3]
 ParameterName=Qry_TEMP_CH2
@@ -4924,7 +4924,7 @@ ObjectType=7
 DataType=0x0002
 AccessType=ro
 PDOMapping=1
-DefaultValue=1200
+DefaultValue=89
 
 [2110]
 ParameterName=Variable Int32

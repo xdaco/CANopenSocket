@@ -825,11 +825,11 @@ mapped object  (subindex 1...8)
 bit   0-7: data length in bits
 bit  8-15: subindex from OD
 bit 16-31: index from OD</description>
-      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="2"/>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="4"/>
       <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x21030110"/>
       <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x21030210"/>
-      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
-      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210C0110"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210C0210"/>
       <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
       <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
       <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
@@ -838,25 +838,25 @@ bit 16-31: index from OD</description>
     <CANopenObject index="1A01" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_TPDOmap">
       <label lang="en">TPDO mapping parameter</label>
       <description lang="en">0x1A00 - 0x1BFF TPDO mapping parameter (see description for 0x1A00)</description>
-      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="8"/>
       <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210C0110"/>
       <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210C0210"/>
-      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
-      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
-      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
-      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210D0108"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210D0208"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210D0308"/>
+      <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0"/>
       <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
       <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
     </CANopenObject>
     <CANopenObject index="1A02" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_TPDOmap">
       <label lang="en">TPDO mapping parameter</label>
       <description lang="en">0x1A00 - 0x1BFF TPDO mapping parameter (see description for 0x1A00)</description>
-      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="0"/>
-      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210D0208"/>
-      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210D0308"/>
-      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
-      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
-      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="8"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210E0020"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210F0108"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210F0208"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210F0308"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0"/>
       <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
       <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
       <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
@@ -1197,26 +1197,26 @@ main cycle max time - maximum mainline function cycle time in percent of timer p
     <CANopenObject index="210C" name="Qry_BATAMPS" objectType="8" subNumber="3" memoryType="RAM" dataType="03" accessType="ro" PDOmapping="optional">
       <label lang="en">Current</label>
       <description lang="en">Battery Current</description>
-      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="1"/>
-      <CANopenSubObject subIndex="01" name="Channel 1 BAT Amps" objectType="7" defaultValue="20"/>
-      <CANopenSubObject subIndex="02" name="Channel 2 BAT Amps" objectType="7" defaultValue="20"/>
+      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="2"/>
+      <CANopenSubObject subIndex="01" name="Channel 1 BAT Amps" objectType="7" defaultValue="200"/>
+      <CANopenSubObject subIndex="02" name="Channel 2 BAT Amps" objectType="7" defaultValue="300"/>
     </CANopenObject>
     <CANopenObject index="210D" name="Qry_VOLTS" objectType="8" subNumber="4" memoryType="RAM" dataType="05" accessType="ro" PDOmapping="optional">
       <label lang="en">Voltage</label>
       <description lang="en">Battery Voltage, Internal 24V bus Voltage, 5V bus voltage</description>
       <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="1"/>
       <CANopenSubObject subIndex="01" name="V Int" objectType="7" defaultValue="240"/>
-      <CANopenSubObject subIndex="02" name="V Bat" objectType="7" defaultValue="260"/>
-      <CANopenSubObject subIndex="03" name="V 5Vout" objectType="7" defaultValue="49"/>
+      <CANopenSubObject subIndex="02" name="V Bat" objectType="7" defaultValue="230"/>
+      <CANopenSubObject subIndex="03" name="V 5Vout" objectType="7" defaultValue="50"/>
     </CANopenObject>
     <CANopenObject index="210E" name="Qry_DIGIN" objectType="7" memoryType="RAM" dataType="07" accessType="ro" PDOmapping="optional" defaultValue="0xF0"/>
     <CANopenObject index="210F" name="Qry_TEMP" objectType="8" subNumber="4" memoryType="RAM" dataType="02" accessType="ro" PDOmapping="optional">
       <label lang="en">Voltage</label>
       <description lang="en">MCU and MOSFET Temperatures</description>
       <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="1"/>
-      <CANopenSubObject subIndex="01" name="Qry_TEMP_MCU" objectType="7" defaultValue="900"/>
-      <CANopenSubObject subIndex="02" name="Qry_TEMP_CH1" objectType="7" defaultValue="1200"/>
-      <CANopenSubObject subIndex="03" name="Qry_TEMP_CH2" objectType="7" defaultValue="1200"/>
+      <CANopenSubObject subIndex="01" name="Qry_TEMP_MCU" objectType="7" defaultValue="120"/>
+      <CANopenSubObject subIndex="02" name="Qry_TEMP_CH1" objectType="7" defaultValue="125"/>
+      <CANopenSubObject subIndex="03" name="Qry_TEMP_CH2" objectType="7" defaultValue="89"/>
     </CANopenObject>
     <CANopenObject index="2110" name="Variable Int32" objectType="8" subNumber="33" memoryType="RAM" dataType="04" accessType="rw" PDOmapping="optional" TPDOdetectCOS="true">
       <label lang="en">Variable Integer 32bit</label>
@@ -2053,7 +2053,7 @@ Trigger time - If integer value passes 'TraceConfig-&gt;threshold', then time is
     </CANopenObject>
   </CANopenObjectList>
   <other>
-    <file fileName="CANopenSocket" fileCreator="Musarraf Hossain" fileCreationDate="2018-07-08" fileCreationTime="23:45:10" fileVersion="-"/>
+    <file fileName="CANopenSocket" fileCreator="Musarraf Hossain" fileCreationDate="2018-07-09" fileCreationTime="00:47:27" fileVersion="-"/>
     <DeviceIdentity>
       <vendorName>CANopenNode</vendorName>
       <productName>CANopenNode</productName>

@@ -98,11 +98,11 @@
               </tr>
               <tr>
                 <th>Creation Time</th>
-                <td>23:45:10</td>
+                <td>00:47:27</td>
               </tr>
               <tr>
                 <th>Creation Date</th>
-                <td>2018-07-08</td>
+                <td>2018-07-09</td>
               </tr>
               <tr>
                 <th>Created By</th>
@@ -2126,7 +2126,7 @@
           <ul>
             <li>
               00 - Number of mapped objects:
-              <input addr="1A00000001" format="U08" pf="rw" value="2"/>
+              <input addr="1A00000001" format="U08" pf="rw" value="4"/>
             </li>
             <li>
               01 - mapped object 1:
@@ -2138,11 +2138,11 @@
             </li>
             <li>
               03 - mapped object 3:
-              <input addr="1A00030004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A00030004" format="X32" pf="rw" value="0x210C0110"/>
             </li>
             <li>
               04 - mapped object 4:
-              <input addr="1A00040004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A00040004" format="X32" pf="rw" value="0x210C0210"/>
             </li>
             <li>
               05 - mapped object 5:
@@ -2167,7 +2167,7 @@
           <ul>
             <li>
               00 - Number of mapped objects:
-              <input addr="1A01000001" format="U08" pf="rw" value="0"/>
+              <input addr="1A01000001" format="U08" pf="rw" value="8"/>
             </li>
             <li>
               01 - mapped object 1:
@@ -2179,19 +2179,19 @@
             </li>
             <li>
               03 - mapped object 3:
-              <input addr="1A01030004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A01030004" format="X32" pf="rw" value="0x210D0108"/>
             </li>
             <li>
               04 - mapped object 4:
-              <input addr="1A01040004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A01040004" format="X32" pf="rw" value="0x210D0208"/>
             </li>
             <li>
               05 - mapped object 5:
-              <input addr="1A01050004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A01050004" format="X32" pf="rw" value="0x210D0308"/>
             </li>
             <li>
               06 - mapped object 6:
-              <input addr="1A01060004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A01060004" format="U32" pf="rw" value="0"/>
             </li>
             <li>
               07 - mapped object 7:
@@ -2208,27 +2208,27 @@
           <ul>
             <li>
               00 - Number of mapped objects:
-              <input addr="1A02000001" format="U08" pf="rw" value="0"/>
+              <input addr="1A02000001" format="U08" pf="rw" value="8"/>
             </li>
             <li>
               01 - mapped object 1:
-              <input addr="1A02010004" format="X32" pf="rw" value="0x210D0208"/>
+              <input addr="1A02010004" format="X32" pf="rw" value="0x210E0020"/>
             </li>
             <li>
               02 - mapped object 2:
-              <input addr="1A02020004" format="X32" pf="rw" value="0x210D0308"/>
+              <input addr="1A02020004" format="X32" pf="rw" value="0x210F0108"/>
             </li>
             <li>
               03 - mapped object 3:
-              <input addr="1A02030004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A02030004" format="X32" pf="rw" value="0x210F0208"/>
             </li>
             <li>
               04 - mapped object 4:
-              <input addr="1A02040004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A02040004" format="X32" pf="rw" value="0x210F0308"/>
             </li>
             <li>
               05 - mapped object 5:
-              <input addr="1A02050004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A02050004" format="U32" pf="rw" value="0"/>
             </li>
             <li>
               06 - mapped object 6:
@@ -2926,15 +2926,15 @@
           <ul>
             <li>
               00 - Number of entries:
-              <input addr="210C000001" format="U08" pf="rro" value="1"/>
+              <input addr="210C000001" format="U08" pf="rro" value="2"/>
             </li>
             <li>
               01 - Channel 1 BAT Amps:
-              <input addr="210C010002" format="I16" pf="rro" value="20"/>
+              <input addr="210C010002" format="I16" pf="rro" value="200"/>
             </li>
             <li>
               02 - Channel 2 BAT Amps:
-              <input addr="210C020002" format="I16" pf="rro" value="20"/>
+              <input addr="210C020002" format="I16" pf="rro" value="300"/>
             </li>
           </ul>
         </li>
@@ -2951,11 +2951,11 @@
             </li>
             <li>
               02 - V Bat:
-              <input addr="210D020001" format="U08" pf="rro" value="260"/>
+              <input addr="210D020001" format="U08" pf="rro" value="230"/>
             </li>
             <li>
               03 - V 5Vout:
-              <input addr="210D030001" format="U08" pf="rro" value="49"/>
+              <input addr="210D030001" format="U08" pf="rro" value="50"/>
             </li>
           </ul>
         </li>
@@ -2973,15 +2973,15 @@
             </li>
             <li>
               01 - Qry_TEMP_MCU:
-              <input addr="210F010001" format="I08" pf="rro" value="900"/>
+              <input addr="210F010001" format="I08" pf="rro" value="120"/>
             </li>
             <li>
               02 - Qry_TEMP_CH1:
-              <input addr="210F020001" format="I08" pf="rro" value="1200"/>
+              <input addr="210F020001" format="I08" pf="rro" value="125"/>
             </li>
             <li>
               03 - Qry_TEMP_CH2:
-              <input addr="210F030001" format="I08" pf="rro" value="1200"/>
+              <input addr="210F030001" format="I08" pf="rro" value="89"/>
             </li>
           </ul>
         </li>
@@ -11684,7 +11684,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>2</td>
+          <td>4</td>
           <td/>
         </tr>
         <tr>
@@ -11714,7 +11714,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210C0110</td>
           <td/>
         </tr>
         <tr>
@@ -11724,7 +11724,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210C0210</td>
           <td/>
         </tr>
         <tr>
@@ -11819,7 +11819,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0</td>
+          <td>8</td>
           <td/>
         </tr>
         <tr>
@@ -11849,7 +11849,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210D0108</td>
           <td/>
         </tr>
         <tr>
@@ -11859,7 +11859,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210D0208</td>
           <td/>
         </tr>
         <tr>
@@ -11869,7 +11869,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210D0308</td>
           <td/>
         </tr>
         <tr>
@@ -11879,7 +11879,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0</td>
           <td/>
         </tr>
         <tr>
@@ -11941,7 +11941,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0</td>
+          <td>8</td>
           <td/>
         </tr>
         <tr>
@@ -11951,7 +11951,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x210D0208</td>
+          <td>0x210E0020</td>
           <td/>
         </tr>
         <tr>
@@ -11961,7 +11961,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x210D0308</td>
+          <td>0x210F0108</td>
           <td/>
         </tr>
         <tr>
@@ -11971,7 +11971,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210F0208</td>
           <td/>
         </tr>
         <tr>
@@ -11981,7 +11981,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210F0308</td>
           <td/>
         </tr>
         <tr>
@@ -11991,7 +11991,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0</td>
           <td/>
         </tr>
         <tr>
@@ -14323,19 +14323,19 @@
         <tr>
           <td>00</td>
           <td>Number of entries</td>
-          <td>1</td>
+          <td>2</td>
           <td/>
         </tr>
         <tr>
           <td>01</td>
           <td>Channel 1 BAT Amps</td>
-          <td>20</td>
+          <td>200</td>
           <td/>
         </tr>
         <tr>
           <td>02</td>
           <td>Channel 2 BAT Amps</td>
-          <td>20</td>
+          <td>300</td>
           <td/>
         </tr>
       </table>
@@ -14389,13 +14389,13 @@
         <tr>
           <td>02</td>
           <td>V Bat</td>
-          <td>260</td>
+          <td>230</td>
           <td/>
         </tr>
         <tr>
           <td>03</td>
           <td>V 5Vout</td>
-          <td>49</td>
+          <td>50</td>
           <td/>
         </tr>
       </table>
@@ -14468,19 +14468,19 @@
         <tr>
           <td>01</td>
           <td>Qry_TEMP_MCU</td>
-          <td>900</td>
+          <td>120</td>
           <td/>
         </tr>
         <tr>
           <td>02</td>
           <td>Qry_TEMP_CH1</td>
-          <td>1200</td>
+          <td>125</td>
           <td/>
         </tr>
         <tr>
           <td>03</td>
           <td>Qry_TEMP_CH2</td>
-          <td>1200</td>
+          <td>89</td>
           <td/>
         </tr>
       </table>

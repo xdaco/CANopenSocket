@@ -10,8 +10,8 @@ FileVersion=-
 FileRevision=0
 EDSVersion=4.0
 Description=Open Source CANopen implementation
-CreationTime=00:47:27
-CreationDate=2018-07-09
+CreationTime=13:33:28
+CreationDate=2018-07-10
 CreatedBy=Musarraf Hossain
 
 
@@ -2592,7 +2592,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=rw
 PDOMapping=0
-DefaultValue=254
+DefaultValue=255
 
 [1803sub3]
 ParameterName=inhibit time
@@ -2600,7 +2600,7 @@ ObjectType=7
 DataType=0x0006
 AccessType=rw
 PDOMapping=0
-DefaultValue=0
+DefaultValue=100
 
 [1803sub4]
 ParameterName=compatibility entry
@@ -2616,7 +2616,7 @@ ObjectType=7
 DataType=0x0006
 AccessType=rw
 PDOMapping=0
-DefaultValue=0
+DefaultValue=250
 
 [1803sub6]
 ParameterName=SYNC start value
@@ -2643,25 +2643,25 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
-DefaultValue=0x80000000
+AccessType=rww
+PDOMapping=1
+DefaultValue=$NODEID+0x680
 
 [1804sub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
-DefaultValue=254
+AccessType=rww
+PDOMapping=1
+DefaultValue=255
 
 [1804sub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
-DefaultValue=0
+AccessType=rww
+PDOMapping=1
+DefaultValue=100
 
 [1804sub4]
 ParameterName=compatibility entry
@@ -2675,16 +2675,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
-DefaultValue=0
+AccessType=rww
+PDOMapping=1
+DefaultValue=250
 
 [1804sub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1805]
@@ -2704,25 +2704,25 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
-DefaultValue=0x80000000
+AccessType=rww
+PDOMapping=1
+DefaultValue=$NODEID+0x780
 
 [1805sub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
-DefaultValue=254
+AccessType=rww
+PDOMapping=1
+DefaultValue=255
 
 [1805sub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
-DefaultValue=0
+AccessType=rww
+PDOMapping=1
+DefaultValue=100
 
 [1805sub4]
 ParameterName=compatibility entry
@@ -2736,16 +2736,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
-DefaultValue=0
+AccessType=rww
+PDOMapping=1
+DefaultValue=250
 
 [1805sub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1806]
@@ -3600,7 +3600,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=rw
 PDOMapping=0
-DefaultValue=0
+DefaultValue=4
 
 [1A03sub1]
 ParameterName=mapped object 1
@@ -3608,7 +3608,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x21030110
 
 [1A03sub2]
 ParameterName=mapped object 2
@@ -3616,7 +3616,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x21030210
 
 [1A03sub3]
 ParameterName=mapped object 3
@@ -3624,7 +3624,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210C0110
 
 [1A03sub4]
 ParameterName=mapped object 4
@@ -3632,7 +3632,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210C0210
 
 [1A03sub5]
 ParameterName=mapped object 5
@@ -3677,7 +3677,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=rw
 PDOMapping=0
-DefaultValue=0
+DefaultValue=4
 
 [1A04sub1]
 ParameterName=mapped object 1
@@ -3685,7 +3685,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x21030110
 
 [1A04sub2]
 ParameterName=mapped object 2
@@ -3693,7 +3693,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x21030210
 
 [1A04sub3]
 ParameterName=mapped object 3
@@ -3701,7 +3701,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210C0110
 
 [1A04sub4]
 ParameterName=mapped object 4
@@ -3709,7 +3709,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210C0210
 
 [1A04sub5]
 ParameterName=mapped object 5
@@ -3754,7 +3754,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=rw
 PDOMapping=0
-DefaultValue=0
+DefaultValue=4
 
 [1A05sub1]
 ParameterName=mapped object 1
@@ -3762,7 +3762,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x21030110
 
 [1A05sub2]
 ParameterName=mapped object 2
@@ -3770,7 +3770,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x21030210
 
 [1A05sub3]
 ParameterName=mapped object 3
@@ -3778,7 +3778,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210C0110
 
 [1A05sub4]
 ParameterName=mapped object 4
@@ -3786,7 +3786,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x00000000
+DefaultValue=0x210C0210
 
 [1A05sub5]
 ParameterName=mapped object 5

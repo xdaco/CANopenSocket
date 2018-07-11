@@ -1147,8 +1147,8 @@ Valid values are in [kbps]:
     <CANopenObject index="2103" name="Qry_ABSPEED" objectType="8" subNumber="3" memoryType="RAM" dataType="03" accessType="ro" PDOmapping="optional">
       <label lang="en">Speed Feedback</label>
       <description lang="en">Channel 1 and Channel 2 speed feedback</description>
-      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="1"/>
-      <CANopenSubObject subIndex="01" name="Channel 1" objectType="7" defaultValue="3000"/>
+      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="2"/>
+      <CANopenSubObject subIndex="01" name="Channel 1" objectType="7" defaultValue="-3000"/>
       <CANopenSubObject subIndex="02" name="Channel 2" objectType="7" defaultValue="-3000"/>
     </CANopenObject>
     <CANopenObject index="2104" name="SYNC time" objectType="7" memoryType="RAM" dataType="06" accessType="ro" PDOmapping="no" defaultValue="0">
@@ -1201,13 +1201,13 @@ main cycle max time - maximum mainline function cycle time in percent of timer p
       <CANopenSubObject subIndex="01" name="Channel 1 BAT Amps" objectType="7" defaultValue="200"/>
       <CANopenSubObject subIndex="02" name="Channel 2 BAT Amps" objectType="7" defaultValue="300"/>
     </CANopenObject>
-    <CANopenObject index="210D" name="Qry_VOLTS" objectType="8" subNumber="4" memoryType="RAM" dataType="05" accessType="ro" PDOmapping="optional">
+    <CANopenObject index="210D" name="Qry_VOLTS" objectType="8" subNumber="4" memoryType="RAM" dataType="06" accessType="ro" PDOmapping="optional">
       <label lang="en">Voltage</label>
       <description lang="en">Battery Voltage, Internal 24V bus Voltage, 5V bus voltage</description>
-      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="1"/>
+      <CANopenSubObject subIndex="00" name="Number of entries" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="3"/>
       <CANopenSubObject subIndex="01" name="V Int" objectType="7" defaultValue="240"/>
       <CANopenSubObject subIndex="02" name="V Bat" objectType="7" defaultValue="230"/>
-      <CANopenSubObject subIndex="03" name="V 5Vout" objectType="7" defaultValue="50"/>
+      <CANopenSubObject subIndex="03" name="V 5Vout" objectType="7" defaultValue="5000"/>
     </CANopenObject>
     <CANopenObject index="210E" name="Qry_DIGIN" objectType="7" memoryType="RAM" dataType="07" accessType="ro" PDOmapping="optional" defaultValue="0xF0"/>
     <CANopenObject index="210F" name="Qry_TEMP" objectType="8" subNumber="4" memoryType="RAM" dataType="02" accessType="ro" PDOmapping="optional">
@@ -1277,6 +1277,27 @@ main cycle max time - maximum mainline function cycle time in percent of timer p
       <CANopenSubObject subIndex="10" name="int32" objectType="7" defaultValue="0"/>
     </CANopenObject>
     <CANopenObject index="2112" name="Variable NV Int32" objectType="8" subNumber="17" memoryType="EEPROM" dataType="04" accessType="rw" PDOmapping="optional" TPDOdetectCOS="true">
+      <label lang="en">Variable nonvolatile Integer 32bit</label>
+      <description lang="en">Vartiable is free to use by application. Variable is stored to internal baterry powered SRAM.</description>
+      <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="16"/>
+      <CANopenSubObject subIndex="01" name="int32" objectType="7" defaultValue="1"/>
+      <CANopenSubObject subIndex="02" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="03" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="04" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="05" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="06" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="07" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="08" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="09" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="0A" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="0B" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="0C" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="0D" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="0E" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="0F" name="int32" objectType="7" defaultValue="0"/>
+      <CANopenSubObject subIndex="10" name="int32" objectType="7" defaultValue="0"/>
+    </CANopenObject>
+    <CANopenObject index="2113" name="Qry_DIGOUT" objectType="7" memoryType="RAM" dataType="06" accessType="ro" PDOmapping="optional" defaultValue="2">
       <label lang="en">Variable nonvolatile Integer 32bit</label>
       <description lang="en">Vartiable is free to use by application. Variable is stored to internal baterry powered SRAM.</description>
       <CANopenSubObject subIndex="00" name="max sub-index" objectType="7" dataType="05" accessType="ro" PDOmapping="no" defaultValue="16"/>
@@ -2053,7 +2074,7 @@ Trigger time - If integer value passes 'TraceConfig-&gt;threshold', then time is
     </CANopenObject>
   </CANopenObjectList>
   <other>
-    <file fileName="CANopenSocket" fileCreator="Musarraf Hossain" fileCreationDate="2018-07-09" fileCreationTime="00:47:27" fileVersion="-"/>
+    <file fileName="CANopenSocket" fileCreator="Musarraf Hossain" fileCreationDate="2018-07-12" fileCreationTime="00:25:20" fileVersion="-"/>
     <DeviceIdentity>
       <vendorName>CANopenNode</vendorName>
       <productName>CANopenNode</productName>

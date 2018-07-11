@@ -191,6 +191,9 @@ only NMT messages are accepted.
 In *canopend terminal* you see, that both devices finished. Further commands
 are not possible. If you set so, last command can also reset computer.
 
+### Motivation
+
+This project also allows us to create and Emulate CANOPen CiA-401 and CiA-402 devices. This is really useful for CANOpen communication software development and testing. An webapp is available to edit the object dictionary for a slave in the canopend/objDict folder. A text file named "instruction to generate the od files" explains the method.
 
 ### Next steps
 Now you can learn more skills on CANopen from some other sources:
@@ -219,3 +222,4 @@ Here we played with virtual CAN interface and result shows as pixels on
 screen. If you connect real CAN interface to your computer, things may
 become dangerous. Keep control and safety on your machines!
 
+****************************************************************************

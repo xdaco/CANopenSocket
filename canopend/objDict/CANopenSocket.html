@@ -98,11 +98,11 @@
               </tr>
               <tr>
                 <th>Creation Time</th>
-                <td>00:47:27</td>
+                <td>00:26:41</td>
               </tr>
               <tr>
                 <th>Creation Date</th>
-                <td>2018-07-09</td>
+                <td>2018-07-12</td>
               </tr>
               <tr>
                 <th>Created By</th>
@@ -1705,11 +1705,11 @@
             </li>
             <li>
               02 - transmission type:
-              <input addr="1803020001" format="U08" pf="rw" value="254"/>
+              <input addr="1803020001" format="U08" pf="rw" value="255"/>
             </li>
             <li>
               03 - inhibit time:
-              <input addr="1803030002" format="U16" pf="rw" value="0"/>
+              <input addr="1803030002" format="U16" pf="rw" value="100"/>
             </li>
             <li>
               04 - compatibility entry:
@@ -1717,7 +1717,7 @@
             </li>
             <li>
               05 - event timer:
-              <input addr="1803050002" format="U16" pf="rw" value="0"/>
+              <input addr="1803050002" format="U16" pf="rw" value="250"/>
             </li>
             <li>
               06 - SYNC start value:
@@ -1734,15 +1734,15 @@
             </li>
             <li>
               01 - COB-ID used by TPDO:
-              <input addr="1804010004" format="X32" pf="rw" value="0x80000000"/>
+              <input addr="1804010004" format="X32" pf="rw" value="$NODEID+0x680"/>
             </li>
             <li>
               02 - transmission type:
-              <input addr="1804020001" format="U08" pf="rw" value="254"/>
+              <input addr="1804020001" format="U08" pf="rw" value="255"/>
             </li>
             <li>
               03 - inhibit time:
-              <input addr="1804030002" format="U16" pf="rw" value="0"/>
+              <input addr="1804030002" format="U16" pf="rw" value="100"/>
             </li>
             <li>
               04 - compatibility entry:
@@ -1750,7 +1750,7 @@
             </li>
             <li>
               05 - event timer:
-              <input addr="1804050002" format="U16" pf="rw" value="0"/>
+              <input addr="1804050002" format="U16" pf="rw" value="250"/>
             </li>
             <li>
               06 - SYNC start value:
@@ -1767,15 +1767,15 @@
             </li>
             <li>
               01 - COB-ID used by TPDO:
-              <input addr="1805010004" format="X32" pf="rw" value="0x80000000"/>
+              <input addr="1805010004" format="X32" pf="rw" value="$NODEID+0x780"/>
             </li>
             <li>
               02 - transmission type:
-              <input addr="1805020001" format="U08" pf="rw" value="254"/>
+              <input addr="1805020001" format="U08" pf="rw" value="255"/>
             </li>
             <li>
               03 - inhibit time:
-              <input addr="1805030002" format="U16" pf="rw" value="0"/>
+              <input addr="1805030002" format="U16" pf="rw" value="100"/>
             </li>
             <li>
               04 - compatibility entry:
@@ -1783,7 +1783,7 @@
             </li>
             <li>
               05 - event timer:
-              <input addr="1805050002" format="U16" pf="rw" value="0"/>
+              <input addr="1805050002" format="U16" pf="rw" value="250"/>
             </li>
             <li>
               06 - SYNC start value:
@@ -2249,23 +2249,23 @@
           <ul>
             <li>
               00 - Number of mapped objects:
-              <input addr="1A03000001" format="U08" pf="rw" value="0"/>
+              <input addr="1A03000001" format="U08" pf="rw" value="4"/>
             </li>
             <li>
               01 - mapped object 1:
-              <input addr="1A03010004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A03010004" format="X32" pf="rw" value="0x21030110"/>
             </li>
             <li>
               02 - mapped object 2:
-              <input addr="1A03020004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A03020004" format="X32" pf="rw" value="0x21030210"/>
             </li>
             <li>
               03 - mapped object 3:
-              <input addr="1A03030004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A03030004" format="X32" pf="rw" value="0x210C0110"/>
             </li>
             <li>
               04 - mapped object 4:
-              <input addr="1A03040004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A03040004" format="X32" pf="rw" value="0x210C0210"/>
             </li>
             <li>
               05 - mapped object 5:
@@ -2290,23 +2290,23 @@
           <ul>
             <li>
               00 - Number of mapped objects:
-              <input addr="1A04000001" format="U08" pf="rw" value="0"/>
+              <input addr="1A04000001" format="U08" pf="rw" value="4"/>
             </li>
             <li>
               01 - mapped object 1:
-              <input addr="1A04010004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A04010004" format="X32" pf="rw" value="0x21030110"/>
             </li>
             <li>
               02 - mapped object 2:
-              <input addr="1A04020004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A04020004" format="X32" pf="rw" value="0x21030210"/>
             </li>
             <li>
               03 - mapped object 3:
-              <input addr="1A04030004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A04030004" format="X32" pf="rw" value="0x210C0110"/>
             </li>
             <li>
               04 - mapped object 4:
-              <input addr="1A04040004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A04040004" format="X32" pf="rw" value="0x210C0210"/>
             </li>
             <li>
               05 - mapped object 5:
@@ -2331,23 +2331,23 @@
           <ul>
             <li>
               00 - Number of mapped objects:
-              <input addr="1A05000001" format="U08" pf="rw" value="0"/>
+              <input addr="1A05000001" format="U08" pf="rw" value="4"/>
             </li>
             <li>
               01 - mapped object 1:
-              <input addr="1A05010004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A05010004" format="X32" pf="rw" value="0x21030110"/>
             </li>
             <li>
               02 - mapped object 2:
-              <input addr="1A05020004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A05020004" format="X32" pf="rw" value="0x21030210"/>
             </li>
             <li>
               03 - mapped object 3:
-              <input addr="1A05030004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A05030004" format="X32" pf="rw" value="0x210C0110"/>
             </li>
             <li>
               04 - mapped object 4:
-              <input addr="1A05040004" format="X32" pf="rw" value="0x00000000"/>
+              <input addr="1A05040004" format="X32" pf="rw" value="0x210C0210"/>
             </li>
             <li>
               05 - mapped object 5:
@@ -2840,11 +2840,11 @@
           <ul>
             <li>
               00 - Number of entries:
-              <input addr="2103000001" format="U08" pf="rro" value="1"/>
+              <input addr="2103000001" format="U08" pf="rro" value="2"/>
             </li>
             <li>
               01 - Channel 1:
-              <input addr="2103010002" format="I16" pf="rro" value="3000"/>
+              <input addr="2103010002" format="I16" pf="rro" value="-3000"/>
             </li>
             <li>
               02 - Channel 2:
@@ -2943,19 +2943,19 @@
           <ul>
             <li>
               00 - Number of entries:
-              <input addr="210D000001" format="U08" pf="rro" value="1"/>
+              <input addr="210D000001" format="U08" pf="rro" value="3"/>
             </li>
             <li>
               01 - V Int:
-              <input addr="210D010001" format="U08" pf="rro" value="240"/>
+              <input addr="210D010002" format="U16" pf="rro" value="240"/>
             </li>
             <li>
               02 - V Bat:
-              <input addr="210D020001" format="U08" pf="rro" value="230"/>
+              <input addr="210D020002" format="U16" pf="rro" value="230"/>
             </li>
             <li>
               03 - V 5Vout:
-              <input addr="210D030001" format="U08" pf="rro" value="50"/>
+              <input addr="210D030002" format="U16" pf="rro" value="5000"/>
             </li>
           </ul>
         </li>
@@ -3267,6 +3267,11 @@
               <input addr="2112100004" format="I32" pf="rw" value="0"/>
             </li>
           </ul>
+        </li>
+        <li>
+          <a docref="CANopenSocket_2113">2113</a>
+          - Qry_DIGOUT:
+          <input addr="2113000002" format="U16" pf="rro" value="2"/>
         </li>
         <li class="expandable">
           <a docref="CANopenSocket_2120">2120 - test var</a>
@@ -10378,7 +10383,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>254</td>
+          <td>255</td>
           <td/>
         </tr>
         <tr>
@@ -10388,7 +10393,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0</td>
+          <td>100</td>
           <td/>
         </tr>
         <tr>
@@ -10408,7 +10413,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0</td>
+          <td>250</td>
           <td/>
         </tr>
         <tr>
@@ -10468,9 +10473,9 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>0x80000000</td>
+          <td>$NODEID+0x680</td>
           <td/>
         </tr>
         <tr>
@@ -10478,9 +10483,9 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>254</td>
+          <td>255</td>
           <td/>
         </tr>
         <tr>
@@ -10488,9 +10493,9 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>0</td>
+          <td>100</td>
           <td/>
         </tr>
         <tr>
@@ -10508,9 +10513,9 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>0</td>
+          <td>250</td>
           <td/>
         </tr>
         <tr>
@@ -10518,7 +10523,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10570,9 +10575,9 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>0x80000000</td>
+          <td>$NODEID+0x780</td>
           <td/>
         </tr>
         <tr>
@@ -10580,9 +10585,9 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>254</td>
+          <td>255</td>
           <td/>
         </tr>
         <tr>
@@ -10590,9 +10595,9 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>0</td>
+          <td>100</td>
           <td/>
         </tr>
         <tr>
@@ -10610,9 +10615,9 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
+          <td>optional</td>
           <td>no</td>
-          <td>no</td>
-          <td>0</td>
+          <td>250</td>
           <td/>
         </tr>
         <tr>
@@ -10620,7 +10625,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -12063,7 +12068,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0</td>
+          <td>4</td>
           <td/>
         </tr>
         <tr>
@@ -12073,7 +12078,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x21030110</td>
           <td/>
         </tr>
         <tr>
@@ -12083,7 +12088,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x21030210</td>
           <td/>
         </tr>
         <tr>
@@ -12093,7 +12098,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210C0110</td>
           <td/>
         </tr>
         <tr>
@@ -12103,7 +12108,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210C0210</td>
           <td/>
         </tr>
         <tr>
@@ -12185,7 +12190,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0</td>
+          <td>4</td>
           <td/>
         </tr>
         <tr>
@@ -12195,7 +12200,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x21030110</td>
           <td/>
         </tr>
         <tr>
@@ -12205,7 +12210,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x21030210</td>
           <td/>
         </tr>
         <tr>
@@ -12215,7 +12220,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210C0110</td>
           <td/>
         </tr>
         <tr>
@@ -12225,7 +12230,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210C0210</td>
           <td/>
         </tr>
         <tr>
@@ -12307,7 +12312,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0</td>
+          <td>4</td>
           <td/>
         </tr>
         <tr>
@@ -12317,7 +12322,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x21030110</td>
           <td/>
         </tr>
         <tr>
@@ -12327,7 +12332,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x21030210</td>
           <td/>
         </tr>
         <tr>
@@ -12337,7 +12342,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210C0110</td>
           <td/>
         </tr>
         <tr>
@@ -12347,7 +12352,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x00000000</td>
+          <td>0x210C0210</td>
           <td/>
         </tr>
         <tr>
@@ -14024,13 +14029,13 @@
         <tr>
           <td>00</td>
           <td>Number of entries</td>
-          <td>1</td>
+          <td>2</td>
           <td/>
         </tr>
         <tr>
           <td>01</td>
           <td>Channel 1</td>
-          <td>3000</td>
+          <td>-3000</td>
           <td/>
         </tr>
         <tr>
@@ -14360,7 +14365,7 @@
           <td>Array</td>
           <td>4</td>
           <td>RAM</td>
-          <td>UNSIGNED8</td>
+          <td>UNSIGNED16</td>
           <td>ro</td>
           <td>optional</td>
           <td>no</td>
@@ -14377,7 +14382,7 @@
         <tr>
           <td>00</td>
           <td>Number of entries</td>
-          <td>1</td>
+          <td>3</td>
           <td/>
         </tr>
         <tr>
@@ -14395,7 +14400,7 @@
         <tr>
           <td>03</td>
           <td>V 5Vout</td>
-          <td>50</td>
+          <td>5000</td>
           <td/>
         </tr>
       </table>
@@ -14991,6 +14996,35 @@
           <td>10</td>
           <td>int32</td>
           <td>0</td>
+          <td/>
+        </tr>
+      </table>
+      <div class="description lang_en">
+        <h4>en: Variable nonvolatile Integer 32bit</h4>
+        <div>Vartiable is free to use by application. Variable is stored to internal baterry powered SRAM.</div>
+      </div>
+    </li>
+    <li id="CANopenSocket_2113">
+      <h3>2113 - Qry_DIGOUT</h3>
+      <table>
+        <tr>
+          <th>Object Type</th>
+          <th>Memory Type</th>
+          <th>Data Type</th>
+          <th>Access Type</th>
+          <th>PDO Mapping</th>
+          <th>TPDO detects COS</th>
+          <th>Default value</th>
+          <th>Actual value</th>
+        </tr>
+        <tr>
+          <td>Var</td>
+          <td>RAM</td>
+          <td>UNSIGNED16</td>
+          <td>ro</td>
+          <td>optional</td>
+          <td>no</td>
+          <td>2</td>
           <td/>
         </tr>
       </table>

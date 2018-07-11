@@ -60,8 +60,8 @@
    FILE INFO:
       FileName:     CANopenSocket
       FileVersion:  -
-      CreationTime: 13:33:28
-      CreationDate: 2018-07-10
+      CreationTime: 23:35:40
+      CreationDate: 2018-07-11
       CreatedBy:    Musarraf Hossain
 *******************************************************************************/
 
@@ -91,7 +91,7 @@
 /*******************************************************************************
    OBJECT DICTIONARY
 *******************************************************************************/
-   #define CO_OD_NoOfElements             176
+   #define CO_OD_NoOfElements             177
 
 
 /*******************************************************************************
@@ -222,10 +222,11 @@ struct sCO_OD_RAM{
 /*2108      */ INTEGER32      qry_RELCNTR[2];
 /*2109      */ INTEGER16      voltage[1];
 /*210C      */ INTEGER16      qry_BATAMPS[2];
-/*210D      */ UNSIGNED8      qry_VOLTS[3];
+/*210D      */ UNSIGNED16     qry_VOLTS[3];
 /*210E      */ UNSIGNED32     qry_DIGIN;
 /*210F      */ INTEGER8       qry_TEMP[3];
 /*2110      */ INTEGER32      variableInt32[32];
+/*2113      */ UNSIGNED16     qry_DIGOUT;
 /*2120      */ OD_testVar_t   testVar;
 /*2130      */ OD_time_t      time;
 /*2400      */ UNSIGNED8      traceEnable;
@@ -447,7 +448,7 @@ extern struct sCO_OD_ROM CO_OD_ROM;
       #define ODA_qry_BATAMPS_channel1BATAmps            0
       #define ODA_qry_BATAMPS_channel2BATAmps            1
 
-/*210D, Data Type: UNSIGNED8, Array[3] */
+/*210D, Data Type: UNSIGNED16, Array[3] */
       #define OD_qry_VOLTS                               CO_OD_RAM.qry_VOLTS
       #define ODL_qry_VOLTS_arrayLength                  3
       #define ODA_qry_VOLTS_VInt                         0
@@ -475,6 +476,9 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 /*2112, Data Type: INTEGER32, Array[16] */
       #define OD_variableNVInt32                         CO_OD_EEPROM.variableNVInt32
       #define ODL_variableNVInt32_arrayLength            16
+
+/*2113, Data Type: UNSIGNED16 */
+      #define OD_qry_DIGOUT                              CO_OD_RAM.qry_DIGOUT
 
 /*2120, Data Type: OD_testVar_t */
       #define OD_testVar                                 CO_OD_RAM.testVar

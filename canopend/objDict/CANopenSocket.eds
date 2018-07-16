@@ -10,8 +10,8 @@ FileVersion=-
 FileRevision=0
 EDSVersion=4.0
 Description=Open Source CANopen implementation
-CreationTime=00:26:41
-CreationDate=2018-07-12
+CreationTime=13:43:47
+CreationDate=2018-07-16
 CreatedBy=Musarraf Hossain
 
 
@@ -3447,7 +3447,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=rw
 PDOMapping=0
-DefaultValue=8
+DefaultValue=4
 
 [1A01sub1]
 ParameterName=mapped object 1
@@ -3455,7 +3455,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x210C0110
+DefaultValue=0x210D0110
 
 [1A01sub2]
 ParameterName=mapped object 2
@@ -3463,7 +3463,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x210C0210
+DefaultValue=0x210D0210
 
 [1A01sub3]
 ParameterName=mapped object 3
@@ -3471,7 +3471,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x210D0108
+DefaultValue=0x210D0310
 
 [1A01sub4]
 ParameterName=mapped object 4
@@ -3479,7 +3479,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x210D0208
+DefaultValue=0x21130010
 
 [1A01sub5]
 ParameterName=mapped object 5
@@ -3487,7 +3487,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x210D0308
+DefaultValue=0
 
 [1A01sub6]
 ParameterName=mapped object 6

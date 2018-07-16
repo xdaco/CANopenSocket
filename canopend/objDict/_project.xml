@@ -816,7 +816,7 @@ value = 1-240:   The SYNC message with the counter value equal to this value sha
       <label lang="en">TPDO communication parameter</label>
       <description lang="en">0x1800 - 0x19FF TPDO communication parameter (see description for 0x1800)</description>
     </CANopenObject>
-    <CANopenObject index="1A00" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_TPDOmap">
+    <CANopenObject index="1A00" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="EEPROM" accessFunctionName="CO_ODF_TPDOmap">
       <label lang="en">TPDO mapping parameter</label>
       <description lang="en">0x1A00 - 0x1BFF TPDO mapping parameter. (To change mapping, 'Number of mapped objects' must be set to 0).
 Number of mapped objects
@@ -835,20 +835,20 @@ bit 16-31: index from OD</description>
       <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
       <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
     </CANopenObject>
-    <CANopenObject index="1A01" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_TPDOmap">
+    <CANopenObject index="1A01" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="EEPROM" accessFunctionName="CO_ODF_TPDOmap">
       <label lang="en">TPDO mapping parameter</label>
       <description lang="en">0x1A00 - 0x1BFF TPDO mapping parameter (see description for 0x1A00)</description>
-      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="8"/>
-      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210C0110"/>
-      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210C0210"/>
-      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210D0108"/>
-      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210D0208"/>
-      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210D0308"/>
+      <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="4"/>
+      <CANopenSubObject subIndex="01" name="mapped object 1" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210D0110"/>
+      <CANopenSubObject subIndex="02" name="mapped object 2" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210D0210"/>
+      <CANopenSubObject subIndex="03" name="mapped object 3" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x210D0310"/>
+      <CANopenSubObject subIndex="04" name="mapped object 4" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x21130010"/>
+      <CANopenSubObject subIndex="05" name="mapped object 5" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0"/>
       <CANopenSubObject subIndex="06" name="mapped object 6" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0"/>
       <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
       <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
     </CANopenObject>
-    <CANopenObject index="1A02" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_TPDOmap">
+    <CANopenObject index="1A02" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="EEPROM" accessFunctionName="CO_ODF_TPDOmap">
       <label lang="en">TPDO mapping parameter</label>
       <description lang="en">0x1A00 - 0x1BFF TPDO mapping parameter (see description for 0x1A00)</description>
       <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="8"/>
@@ -861,7 +861,7 @@ bit 16-31: index from OD</description>
       <CANopenSubObject subIndex="07" name="mapped object 7" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
       <CANopenSubObject subIndex="08" name="mapped object 8" objectType="7" dataType="07" accessType="rw" PDOmapping="no" defaultValue="0x00000000"/>
     </CANopenObject>
-    <CANopenObject index="1A03" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="ROM" accessFunctionName="CO_ODF_TPDOmap">
+    <CANopenObject index="1A03" name="TPDO mapping parameter" objectType="9" subNumber="9" memoryType="EEPROM" accessFunctionName="CO_ODF_TPDOmap">
       <label lang="en">TPDO mapping parameter</label>
       <description lang="en">0x1A00 - 0x1BFF TPDO mapping parameter (see description for 0x1A00)</description>
       <CANopenSubObject subIndex="00" name="Number of mapped objects" objectType="7" dataType="05" accessType="rw" PDOmapping="no" defaultValue="4"/>
@@ -2074,7 +2074,7 @@ Trigger time - If integer value passes 'TraceConfig-&gt;threshold', then time is
     </CANopenObject>
   </CANopenObjectList>
   <other>
-    <file fileName="CANopenSocket" fileCreator="Musarraf Hossain" fileCreationDate="2018-07-12" fileCreationTime="00:25:20" fileVersion="-"/>
+    <file fileName="CANopenSocket" fileCreator="Musarraf Hossain" fileCreationDate="2018-07-16" fileCreationTime="13:43:47" fileVersion="-"/>
     <DeviceIdentity>
       <vendorName>CANopenNode</vendorName>
       <productName>CANopenNode</productName>

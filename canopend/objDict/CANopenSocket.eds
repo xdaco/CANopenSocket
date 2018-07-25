@@ -10,8 +10,8 @@ FileVersion=-
 FileRevision=0
 EDSVersion=4.0
 Description=Open Source CANopen implementation
-CreationTime=13:43:47
-CreationDate=2018-07-16
+CreationTime=11:14:17
+CreationDate=2018-07-25
 CreatedBy=Musarraf Hossain
 
 
@@ -3386,7 +3386,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=rw
 PDOMapping=0
-DefaultValue=0x21030210
+DefaultValue=0x21030310
 
 [1A00sub3]
 ParameterName=mapped object 3
@@ -4671,7 +4671,7 @@ DefaultValue=250
 [2103]
 ParameterName=Qry_ABSPEED
 ObjectType=8
-SubNumber=3
+SubNumber=4
 
 [2103sub0]
 ParameterName=Number of entries
@@ -4679,7 +4679,7 @@ ObjectType=7
 DataType=0x0005
 AccessType=ro
 PDOMapping=0
-DefaultValue=2
+DefaultValue=3
 
 [2103sub1]
 ParameterName=Channel 1
@@ -4696,6 +4696,14 @@ DataType=0x0003
 AccessType=ro
 PDOMapping=1
 DefaultValue=-3000
+
+[2103sub3]
+ParameterName=Channel 3
+ObjectType=7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+DefaultValue=3000
 
 [2104]
 ParameterName=SYNC time

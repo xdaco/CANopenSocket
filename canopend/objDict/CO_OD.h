@@ -60,8 +60,8 @@
    FILE INFO:
       FileName:     CANopenSocket
       FileVersion:  -
-      CreationTime: 13:50:02
-      CreationDate: 2018-07-16
+      CreationTime: 11:06:03
+      CreationDate: 2018-07-25
       CreatedBy:    Musarraf Hossain
 *******************************************************************************/
 
@@ -216,7 +216,7 @@ struct sCO_OD_RAM{
 /*2008      */ UNSIGNED8      cmd_DOUT;
 /*200E      */ UNSIGNED8      cmd_MSTOP;
 /*2100      */ OCTET_STRING   errorStatusBits[10];
-/*2103      */ INTEGER16      qry_ABSPEED[2];
+/*2103      */ INTEGER16      qry_ABSPEED[3];
 /*2104      */ UNSIGNED16     SYNCTime;
 /*2107      */ UNSIGNED16     performance[5];
 /*2108      */ INTEGER32      qry_RELCNTR[2];
@@ -410,11 +410,12 @@ extern struct sCO_OD_ROM CO_OD_ROM;
 /*2102, Data Type: UNSIGNED16 */
       #define OD_CANBitRate                              CO_OD_ROM.CANBitRate
 
-/*2103, Data Type: INTEGER16, Array[2] */
+/*2103, Data Type: INTEGER16, Array[3] */
       #define OD_qry_ABSPEED                             CO_OD_RAM.qry_ABSPEED
-      #define ODL_qry_ABSPEED_arrayLength                2
+      #define ODL_qry_ABSPEED_arrayLength                3
       #define ODA_qry_ABSPEED_channel1                   0
       #define ODA_qry_ABSPEED_channel2                   1
+      #define ODA_qry_ABSPEED_channel3                   2
 
 /*2104, Data Type: UNSIGNED16 */
       #define OD_SYNCTime                                CO_OD_RAM.SYNCTime

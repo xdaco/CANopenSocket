@@ -98,11 +98,11 @@
               </tr>
               <tr>
                 <th>Creation Time</th>
-                <td>00:26:41</td>
+                <td>11:14:17</td>
               </tr>
               <tr>
                 <th>Creation Date</th>
-                <td>2018-07-12</td>
+                <td>2018-07-25</td>
               </tr>
               <tr>
                 <th>Created By</th>
@@ -2134,7 +2134,7 @@
             </li>
             <li>
               02 - mapped object 2:
-              <input addr="1A00020004" format="X32" pf="rw" value="0x21030210"/>
+              <input addr="1A00020004" format="X32" pf="rw" value="0x21030310"/>
             </li>
             <li>
               03 - mapped object 3:
@@ -2167,27 +2167,27 @@
           <ul>
             <li>
               00 - Number of mapped objects:
-              <input addr="1A01000001" format="U08" pf="rw" value="8"/>
+              <input addr="1A01000001" format="U08" pf="rw" value="4"/>
             </li>
             <li>
               01 - mapped object 1:
-              <input addr="1A01010004" format="X32" pf="rw" value="0x210C0110"/>
+              <input addr="1A01010004" format="X32" pf="rw" value="0x210D0110"/>
             </li>
             <li>
               02 - mapped object 2:
-              <input addr="1A01020004" format="X32" pf="rw" value="0x210C0210"/>
+              <input addr="1A01020004" format="X32" pf="rw" value="0x210D0210"/>
             </li>
             <li>
               03 - mapped object 3:
-              <input addr="1A01030004" format="X32" pf="rw" value="0x210D0108"/>
+              <input addr="1A01030004" format="X32" pf="rw" value="0x210D0310"/>
             </li>
             <li>
               04 - mapped object 4:
-              <input addr="1A01040004" format="X32" pf="rw" value="0x210D0208"/>
+              <input addr="1A01040004" format="X32" pf="rw" value="0x21130010"/>
             </li>
             <li>
               05 - mapped object 5:
-              <input addr="1A01050004" format="X32" pf="rw" value="0x210D0308"/>
+              <input addr="1A01050004" format="U32" pf="rw" value="0"/>
             </li>
             <li>
               06 - mapped object 6:
@@ -2840,7 +2840,7 @@
           <ul>
             <li>
               00 - Number of entries:
-              <input addr="2103000001" format="U08" pf="rro" value="2"/>
+              <input addr="2103000001" format="U08" pf="rro" value="3"/>
             </li>
             <li>
               01 - Channel 1:
@@ -2849,6 +2849,10 @@
             <li>
               02 - Channel 2:
               <input addr="2103020002" format="I16" pf="rro" value="-3000"/>
+            </li>
+            <li>
+              03 - Channel 3:
+              <input addr="2103030002" format="I16" pf="rro" value="3000"/>
             </li>
           </ul>
         </li>
@@ -11709,7 +11713,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x21030210</td>
+          <td>0x21030310</td>
           <td/>
         </tr>
         <tr>
@@ -11824,7 +11828,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>8</td>
+          <td>4</td>
           <td/>
         </tr>
         <tr>
@@ -11834,7 +11838,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x210C0110</td>
+          <td>0x210D0110</td>
           <td/>
         </tr>
         <tr>
@@ -11844,7 +11848,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x210C0210</td>
+          <td>0x210D0210</td>
           <td/>
         </tr>
         <tr>
@@ -11854,7 +11858,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x210D0108</td>
+          <td>0x210D0310</td>
           <td/>
         </tr>
         <tr>
@@ -11864,7 +11868,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x210D0208</td>
+          <td>0x21130010</td>
           <td/>
         </tr>
         <tr>
@@ -11874,7 +11878,7 @@
           <td>rw</td>
           <td>no</td>
           <td>no</td>
-          <td>0x210D0308</td>
+          <td>0</td>
           <td/>
         </tr>
         <tr>
@@ -14010,7 +14014,7 @@
         </tr>
         <tr>
           <td>Array</td>
-          <td>3</td>
+          <td>4</td>
           <td>RAM</td>
           <td>INTEGER16</td>
           <td>ro</td>
@@ -14029,7 +14033,7 @@
         <tr>
           <td>00</td>
           <td>Number of entries</td>
-          <td>2</td>
+          <td>3</td>
           <td/>
         </tr>
         <tr>
@@ -14042,6 +14046,12 @@
           <td>02</td>
           <td>Channel 2</td>
           <td>-3000</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>Channel 3</td>
+          <td>3000</td>
           <td/>
         </tr>
       </table>

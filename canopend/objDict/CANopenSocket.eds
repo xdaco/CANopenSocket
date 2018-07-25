@@ -6,11 +6,11 @@
 
 [FileInfo]
 FileName=CANopenSocket
-FileVersion=-
+FileVersion=1.0
 FileRevision=0
 EDSVersion=4.0
 Description=Open Source CANopen implementation
-CreationTime=11:14:17
+CreationTime=14:48:52
 CreationDate=2018-07-25
 CreatedBy=Musarraf Hossain
 
@@ -526,7 +526,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=BlueOcean
+DefaultValue=0
 
 [1018sub2]
 ParameterName=Product code
@@ -550,7 +550,7 @@ ObjectType=7
 DataType=0x0007
 AccessType=ro
 PDOMapping=0
-DefaultValue=9911028383
+DefaultValue=12345678
 
 [1019]
 ParameterName=Synchronous counter overflow value
@@ -2583,24 +2583,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=$NODEID+0x480
 
 [1803sub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=255
 
 [1803sub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=100
 
 [1803sub4]
@@ -2615,16 +2615,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=250
 
 [1803sub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1804]
@@ -2766,24 +2766,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0x80000000
 
 [1806sub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=254
 
 [1806sub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1806sub4]
@@ -2798,16 +2798,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1806sub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1807]
@@ -2827,24 +2827,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0x80000000
 
 [1807sub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=254
 
 [1807sub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1807sub4]
@@ -2859,16 +2859,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1807sub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1808]
@@ -2888,24 +2888,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0x80000000
 
 [1808sub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=254
 
 [1808sub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1808sub4]
@@ -2920,16 +2920,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1808sub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1809]
@@ -2949,24 +2949,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0x80000000
 
 [1809sub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=254
 
 [1809sub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1809sub4]
@@ -2981,16 +2981,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1809sub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180A]
@@ -3010,24 +3010,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0x80000000
 
 [180Asub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=254
 
 [180Asub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Asub4]
@@ -3042,16 +3042,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Asub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180B]
@@ -3071,24 +3071,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0x80000000
 
 [180Bsub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=254
 
 [180Bsub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Bsub4]
@@ -3103,16 +3103,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Bsub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180C]
@@ -3132,24 +3132,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0x80000000
 
 [180Csub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=254
 
 [180Csub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Csub4]
@@ -3164,16 +3164,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Csub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180D]
@@ -3193,24 +3193,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0x80000000
 
 [180Dsub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=254
 
 [180Dsub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Dsub4]
@@ -3225,16 +3225,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Dsub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180E]
@@ -3254,24 +3254,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0x80000000
 
 [180Esub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=254
 
 [180Esub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Esub4]
@@ -3286,16 +3286,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Esub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180F]
@@ -3315,24 +3315,24 @@ DefaultValue=6
 ParameterName=COB-ID used by TPDO
 ObjectType=7
 DataType=0x0007
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0x80000000
 
 [180Fsub2]
 ParameterName=transmission type
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=254
 
 [180Fsub3]
 ParameterName=inhibit time
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Fsub4]
@@ -3347,16 +3347,16 @@ DefaultValue=0
 ParameterName=event timer
 ObjectType=7
 DataType=0x0006
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [180Fsub6]
 ParameterName=SYNC start value
 ObjectType=7
 DataType=0x0005
-AccessType=rw
-PDOMapping=0
+AccessType=rww
+PDOMapping=1
 DefaultValue=0
 
 [1A00]

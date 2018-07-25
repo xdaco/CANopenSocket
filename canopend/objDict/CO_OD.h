@@ -59,8 +59,8 @@
 /*******************************************************************************
    FILE INFO:
       FileName:     CANopenSocket
-      FileVersion:  -
-      CreationTime: 11:06:03
+      FileVersion:  1.0
+      CreationTime: 15:19:20
       CreationDate: 2018-07-25
       CreatedBy:    Musarraf Hossain
 *******************************************************************************/

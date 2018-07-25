@@ -94,11 +94,11 @@
               </tr>
               <tr>
                 <th>File Version</th>
-                <td>-</td>
+                <td>1.0</td>
               </tr>
               <tr>
                 <th>Creation Time</th>
-                <td>11:14:17</td>
+                <td>14:48:52</td>
               </tr>
               <tr>
                 <th>Creation Date</th>
@@ -573,7 +573,7 @@
             </li>
             <li>
               01 - Vendor-ID:
-              <input addr="1018010004" format="U32" pf="ro" value="BlueOcean"/>
+              <input addr="1018010004" format="U32" pf="ro" value="0"/>
             </li>
             <li>
               02 - Product code:
@@ -585,7 +585,7 @@
             </li>
             <li>
               04 - Serial number:
-              <input addr="1018040004" format="U32" pf="ro" value="9911028383"/>
+              <input addr="1018040004" format="U32" pf="ro" value="12345678"/>
             </li>
           </ul>
         </li>
@@ -6594,7 +6594,7 @@
           <td>ro</td>
           <td>no</td>
           <td>no</td>
-          <td>BlueOcean</td>
+          <td>0</td>
           <td/>
         </tr>
         <tr>
@@ -6624,7 +6624,7 @@
           <td>ro</td>
           <td>no</td>
           <td>no</td>
-          <td>9911028383</td>
+          <td>12345678</td>
           <td/>
         </tr>
       </table>
@@ -10375,7 +10375,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>$NODEID+0x480</td>
           <td/>
@@ -10385,7 +10385,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>255</td>
           <td/>
@@ -10395,7 +10395,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>100</td>
           <td/>
@@ -10415,7 +10415,7 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>250</td>
           <td/>
@@ -10425,7 +10425,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10681,7 +10681,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0x80000000</td>
           <td/>
@@ -10691,7 +10691,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>254</td>
           <td/>
@@ -10701,7 +10701,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10721,7 +10721,7 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10731,7 +10731,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10783,7 +10783,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0x80000000</td>
           <td/>
@@ -10793,7 +10793,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>254</td>
           <td/>
@@ -10803,7 +10803,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10823,7 +10823,7 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10833,7 +10833,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10885,7 +10885,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0x80000000</td>
           <td/>
@@ -10895,7 +10895,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>254</td>
           <td/>
@@ -10905,7 +10905,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10925,7 +10925,7 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10935,7 +10935,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -10987,7 +10987,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0x80000000</td>
           <td/>
@@ -10997,7 +10997,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>254</td>
           <td/>
@@ -11007,7 +11007,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11027,7 +11027,7 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11037,7 +11037,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11089,7 +11089,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0x80000000</td>
           <td/>
@@ -11099,7 +11099,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>254</td>
           <td/>
@@ -11109,7 +11109,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11129,7 +11129,7 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11139,7 +11139,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11191,7 +11191,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0x80000000</td>
           <td/>
@@ -11201,7 +11201,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>254</td>
           <td/>
@@ -11211,7 +11211,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11231,7 +11231,7 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11241,7 +11241,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11293,7 +11293,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0x80000000</td>
           <td/>
@@ -11303,7 +11303,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>254</td>
           <td/>
@@ -11313,7 +11313,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11333,7 +11333,7 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11343,7 +11343,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11395,7 +11395,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0x80000000</td>
           <td/>
@@ -11405,7 +11405,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>254</td>
           <td/>
@@ -11415,7 +11415,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11435,7 +11435,7 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11445,7 +11445,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11497,7 +11497,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0x80000000</td>
           <td/>
@@ -11507,7 +11507,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>254</td>
           <td/>
@@ -11517,7 +11517,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11537,7 +11537,7 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11547,7 +11547,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11599,7 +11599,7 @@
           <td>COB-ID used by TPDO</td>
           <td>UNSIGNED32</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0x80000000</td>
           <td/>
@@ -11609,7 +11609,7 @@
           <td>transmission type</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>254</td>
           <td/>
@@ -11619,7 +11619,7 @@
           <td>inhibit time</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11639,7 +11639,7 @@
           <td>event timer</td>
           <td>UNSIGNED16</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
@@ -11649,7 +11649,7 @@
           <td>SYNC start value</td>
           <td>UNSIGNED8</td>
           <td>rw</td>
-          <td>no</td>
+          <td>optional</td>
           <td>no</td>
           <td>0</td>
           <td/>
